@@ -18,7 +18,7 @@ Na GitHubie: Settings → Pages → Deploy from a branch → `main` → `/docs` 
 
 ## Stan projektu
 
-Strona główna ma edytowalne teksty, wektorowe logo, responsywny układ i krótkie pojawienie się logo. Podstrony są przygotowanymi miejscami na treści. Kontakt prowadzi do oficjalnego profilu Instagram; nie ma jeszcze formularza rezerwacji ani wysyłania wiadomości.
+Strona główna ma edytowalne teksty, mniejsze wektorowe logo, responsywny układ i animacje wejścia logo, hasła oraz dolnej nawigacji. Kremowe CTA „Porozmawiajmy” otwiera panel kontaktu. Telefon: +48 884 021 024; Instagram: @primo.studiodesign. Link Facebooka i e-mail czekają na dane studia w `docs/contact.js`; do tego czasu są nieaktywne. Formularz po uzupełnieniu adresu przygotuje wiadomość w aplikacji pocztowej użytkownika; nie wysyła jej automatycznie. Podstrony pozostają przygotowanymi miejscami na treści.
 
 Zdjęcie hero jest ilustracją koncepcji wygenerowaną do makiety, a nie potwierdzoną realizacją studia. Portfolio uzupełniamy wyłącznie prawdziwymi projektami klienta. Logo zostało ręcznie odtworzone na podstawie udostępnionych materiałów; oryginalne pliki marki mają pierwszeństwo, gdy będą dostępne.
 
