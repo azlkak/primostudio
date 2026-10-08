@@ -10,6 +10,16 @@ async function startCoverMotion() {
 if (document.readyState === "complete") startCoverMotion();
 else window.addEventListener("load", startCoverMotion, { once: true });
 
+document.querySelectorAll("[data-theme-toggle], [data-theme-auto]").forEach(button => {
+  button.addEventListener("click", () => {
+    const animated = cover.querySelectorAll(".brand, .headline-intro, .headline-main");
+    animated.forEach(element => { element.style.animation = "none"; });
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      animated.forEach(element => { element.style.animation = ""; });
+    }));
+  });
+});
+
 // Verified contact details only. Fill the two empty values when supplied by the studio.
 const studioContact = { email: "", facebook: "" };
 
