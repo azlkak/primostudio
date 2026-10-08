@@ -1,7 +1,24 @@
 // Begin visible entrances after the hero and fonts have finished loading.
 const cover = document.querySelector(".cover");
+function positionHeadlineBehindSofa() {
+  const photo = cover.querySelector(document.documentElement.dataset.theme === "night" ? ".hero-photo.hero-night" : ".hero-photo.hero-day");
+  if (!photo.naturalWidth) return;
+  const width = cover.clientWidth;
+  const height = cover.clientHeight;
+  const scale = Math.max(width / photo.naturalWidth, height / photo.naturalHeight);
+  const photoHeight = photo.naturalHeight * scale;
+  const sofaTop = (height - photoHeight) / 2 + photoHeight * .57;
+  const headline = cover.querySelector(".cover-headline");
+  const mainText = cover.querySelector(".headline-main");
+  const fontSize = parseFloat(getComputedStyle(mainText).fontSize);
+  const top = sofaTop + fontSize * .25 - headline.offsetHeight;
+  cover.style.setProperty("--headline-top", `${Math.max(150, top)}px`);
+}
+new ResizeObserver(positionHeadlineBehindSofa).observe(cover);
+new MutationObserver(positionHeadlineBehindSofa).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 async function startCoverMotion() {
   await document.fonts.ready;
+  positionHeadlineBehindSofa();
   requestAnimationFrame(() => {
     cover.classList.add("motion-ready");
     document.documentElement.classList.remove("motion-pending");
@@ -10,7 +27,7 @@ async function startCoverMotion() {
 if (document.readyState === "complete") startCoverMotion();
 else window.addEventListener("load", startCoverMotion, { once: true });
 
-document.querySelectorAll("[data-theme-toggle], [data-theme-auto]").forEach(button => {
+document.querySelectorAll("[data-theme-toggle]").forEach(button => {
   button.addEventListener("click", () => {
     const animated = cover.querySelectorAll(".brand, .headline-intro, .headline-main");
     animated.forEach(element => { element.style.animation = "none"; });

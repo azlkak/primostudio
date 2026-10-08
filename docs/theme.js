@@ -1,4 +1,4 @@
-// A saved manual choice takes priority; Auto follows the system preference.
+// Follow the system by default; remember a manual selection.
 (() => {
   const root = document.documentElement;
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -16,10 +16,6 @@
     document.querySelectorAll("[data-theme-toggle]").forEach(button => {
       button.setAttribute("aria-checked", String(theme === "night"));
       button.title = theme === "night" ? "Włącz widok dzienny" : "Włącz widok nocny";
-      button.querySelector("[data-theme-label]").textContent = theme === "night" ? "Noc" : "Dzień";
-    });
-    document.querySelectorAll("[data-theme-auto]").forEach(button => {
-      button.setAttribute("aria-pressed", String(preference === "auto"));
     });
     document.querySelectorAll("[data-day-src]").forEach(image => {
       image.src = theme === "night" ? image.dataset.nightSrc : image.dataset.daySrc;
@@ -48,9 +44,6 @@
     document.querySelectorAll(".theme-control").forEach(control => { control.hidden = false; });
     document.querySelectorAll("[data-theme-toggle]").forEach(button => {
       button.addEventListener("click", () => chooseTheme(root.dataset.theme === "night" ? "day" : "night"));
-    });
-    document.querySelectorAll("[data-theme-auto]").forEach(button => {
-      button.addEventListener("click", () => chooseTheme("auto"));
     });
     applyTheme();
   }, { once: true });
