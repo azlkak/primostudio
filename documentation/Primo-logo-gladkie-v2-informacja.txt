@@ -1,0 +1,6 @@
+Primo Studio — ręcznie odrysowane logo z gładkich krzywych Béziera.
+Pliki SVG są wektorowe, mają przezroczyste tło i nie wymagają instalowania fontu. Napis jest zbudowany z krzywych i zachowuje indywidualne m.
+Krem: #F2E7D8. Kakao: #372017.
+PNG: monogram 4096 px wysokości, napis 4096 px szerokości, tło przezroczyste.
+Integracja Figmy odrzuciła aktualizację z powodu limitu planu Starter; pliki można przeciągnąć do istniejącego projektu i zastąpić stare elementy.
+To odtworzenie na podstawie dostarczonych zrzutów, nie oryginalny plik źródłowy marki.

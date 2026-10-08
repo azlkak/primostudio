@@ -1,0 +1,5 @@
+Narzędzie: wbudowane imagegen. Edycja wcześniejszej makiety w celu usunięcia tekstu i utworzenia tła. Zdjęcie ilustracyjne.
+Use case: precise-object-edit.
+Edit target: supplied Primo Studio homepage image. Extract a clean background photograph for use beneath editable native Figma text layers.
+Remove ONLY all graphic overlays: top monogram, Primo Studio wordmark, ARCHITEKTURA WNĘTRZ; all large central headline and smaller sentence; bottom navigation text, sunbursts, horizontal rules. Fill removed overlay regions with natural continuation of the EXACT underlying interior scene.
+Preserve the original warm medium-taupe interior photo, original exposure, colors, illumination, camera framing, all architecture, oak kitchen, stone island, two pendants, cream curving sofa, coffee table, armchair, plant, windows and curtains EXACTLY. Do not brighten, redesign, reframe or add objects. Full image edge-to-edge photograph, same landscape aspect. No text, letters, logos, watermarks, UI, borders.

@@ -1,0 +1,32 @@
+PRIMO STUDIO — ZAŁOŻENIA OSTATNICH ZMIAN
+Narzędzie: wbudowany ImageGen.
+Makiety statyczne, fotografie poglądowe.
+
+WARIANT 01 — naturalna zieleń, błękit i terakota w zdjęciach; układ bez zmian.
+Pełna instrukcja generowania:
+Use case: precise-object-edit. Refine ONLY THE PHOTOGRAPHY COLOR AND CONTENT of the existing Primo Studio long scrolling homepage.
+EDIT TARGET: Image 1, the approved long Primo homepage. Image 2 is only a COLOR BALANCE reference. It shows warm neutral architecture balanced with natural green trees, blue-gray sky, cooler water/shadows and a subtle warm accent. Do not copy the other studio's brand, buildings, text, UI overlay controls, layout, or project claims.
+User request: current photos are too monochromatic and all beige. Add tasteful natural color variety while keeping a calm warm-light brand.
+Invariants: Keep the entire website layout, page dimensions, section order, ivory background, dark cocoa typography, line rules, all buttons, exact Polish text, font styles, logo and spacings unchanged. Change ONLY content INSIDE existing photographic rectangles. Do not recolor the text, buttons or UI. Do not introduce new photo rectangles. Do not make an architectural exterior website; Primo is an interior design studio.
+Specific photo updates:
+HERO existing right photo: keep refined linen sofa, stone coffee table and oak living room, but improve natural white balance, remove uniform sepia/yellow cast. Show fresh olive-green foliage and a visible natural light blue sky and green garden through the window. Add one restrained muted terracotta pillow or ceramic bowl. Stone highlights warm white, shadows cooler gray. Warm natural wood must stay brown, not gray. Introduce authentic natural daylight and a clearer green tree outside.
+PORTFOLIO left kitchen: existing warm oak and travertine scene with a tasteful muted sage/olive green finish on a cabinet section or island base, warm natural wood alongside, a small rust terracotta bowl, leafy green outdoor view. Sophisticated natural complementary colors, not saturated or childish.
+PORTFOLIO right bedroom: creamy linen bed and oak frame remain, with a muted dusty-blue bed throw and one earth-red/terracotta cushion, green leaves outside window, clean balanced daylight. Visually distinct from kitchen photo. Still neutral and elegant, no patterns.
+STUDIO material-sample photo: oak, stone and plans remain, but add muted sage-green textile sample, warm terracotta tile sample and a subtly blue-gray stone sample among existing material swatches. Green olive sprig. No new text.
+BOTTOM contact photograph: preserve light wall and side-table image framing, make olive plant naturally green and ceramics subtly terracotta; keep background behind large text pale and unobtrusive for dark cocoa legibility.
+Natural architectural/editorial photography, restrained color, no color filter across the webpage. Bring life through green foliage, blue sky and selective textiles/ceramics, balanced warmer and cooler tones like reference 2. Same welcoming warm-light concept. No unnaturally saturated colors, no teal-orange grading. Preserve every text exactly, no section removed or altered. Produce the complete long homepage as a single image.
+
+WARIANT 02 — kompaktowe linki w dwóch liniach, cienkie linie i separatory w stopce.
+Pełna instrukcja generowania:
+Use case: precise-object-edit, UI footer revision.
+EDIT TARGET: Image 1, the approved Primo Studio single-screen photographic homepage. Image 2 is a STYLE reference ONLY for the bottom footer/navigation strip, not an edit target.
+Primary request: change ONLY the BOTTOM NAVIGATION STRIP of image 1 to match the small, compact, two-line white typographic footer style of image 2.
+Invariants: Preserve everything above the existing bottom horizontal line exactly: same entire living room photograph, original image framing and size, logo, architecture subtitle, centered hero heading, body line, color tonality, typography, spacing and positions. Do not redesign, recrop, re-light or change any content outside the bottom strip. Keep landscape dimensions and full-screen composition.
+Footer revision: The existing oversized one-line navigation labels and arrow glyphs must be removed. Replace with a refined thin photographic footer strip between two warm-white horizontal hairlines, one on top at the existing line and one just above bottom edge. Background stays the exact original living-room rug photograph, no solid panels, no gradients, no opaque fill. Match reference 2's compact two-line white bold-ish sans-serif lettering, small scale, tight but readable leading and neatly aligned two-line blocks. Each remains an independent clickable text link. Use FOUR blocks distributed with comfortable empty space across the width, same visual baseline, exact text:
+left block "Nasze" on first line, "projekty" on second;
+second block "Poznaj" on first line, "studio" on second;
+third block "Jak" on first line, "pracujemy" on second;
+right block "Porozmawiajmy" on first line, "o wnętrzu" on second.
+Meaning: these navigate to Projects, Studio, Cooperation, Contact subpages respectively. Do not draw buttons/cards. No arrows, no separate underlines beneath each link. Small decorative cream-white sunburst/star separators like the reference can sit BETWEEN first and second block and BETWEEN third and fourth block, around 14px, not big stars. Navigation text approximately 19 to 22px in a 1586px-wide image, noticeably smaller and stronger than old one-line labels. Footer about 105 to 120px tall total, containing two-line labels vertically centered between hairlines. Elegant reference-like compact imprint, NOT large tabs or a row of big link titles.
+All text exact Polish diacritics, especially "wnętrzu". Keep upper webpage completely unchanged.
+

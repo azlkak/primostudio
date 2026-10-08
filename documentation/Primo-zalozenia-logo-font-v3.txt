@@ -1,0 +1,32 @@
+PRIMO STUDIO - LOGO I TYPOGRAFIA
+Narzędzie: wbudowany ImageGen.
+Monogram i napis marki na podstawie plików przekazanych przez użytkownika. Charakter typografii na podstawie screenu "Nasza misja?". Dokładna nazwa fontu niepotwierdzona.
+
+WARIANT 01 - pełny prompt:
+Use case: precise-object-edit, brand identity and typography update.
+Edit target: Image 1 is the approved Primo Studio scrolling homepage with green, blue and terracotta accents. Image 2 is the actual official cream-on-brown Primo Studio monogram, image 3 is the official "Primo Studio" wordmark, image 4 is the studio's Instagram typography reference.
+User request: replace ALL branding with actual Instagram brand assets, and match the fonts to supplied reference.
+Change only branding and typography. Keep every photograph, color accent, image crop, section layout and order, ivory background, grid, rules, navigation items, CTA wording, Polish copy, and page dimensions unchanged.
+BRANDING: In the header at top left replace the generic "Primo Studio" lettering with a compact lockup of the exact official monogram from image 2 at left and official wordmark from image 3 beside it. In the bottom footer at left make the same replacement. The monogram is a tall rectangular geometric emblem containing two interlocking oval forms in its upper section and two mirrored forms below, linked by the central divider. Preserve original proportions, exact geometry, stroke weight, inner negative space, and original orientation; no invented or redesigned logo. Cream emblem on a small cocoa-brown square matching image 2 is appropriate on the ivory page. The wordmark must faithfully match image 3's very thin, rounded geometric sans letters, exactly "Primo Studio" in title case, rendered cocoa on ivory. Preserve the official custom P, rounded r and o, narrow i, and S proportions. Do not use uppercase generic typography for wordmark. Header brand lockup must fit original header without pushing nav or photos; footer lockup must remain modest and balanced.
+TYPOGRAPHY: Image 4 defines the style for ALL large headings and body copy: elegant high-contrast expressive editorial serif, fine strokes, organically curved serifs, narrow delicate proportions, warm sophisticated book typography. Use its "Nasza misja?" heading as character-shape reference for hero and all other section headlines. Use the serif paragraph style seen in image 4 for descriptive text and FAQ questions. Keep hero and other headlines at same approximate scale and line wrapping as original target, preserving hierarchy and no overlap. This should look like the actual Instagram brand, not generic Times New Roman, not the original generic serif.
+Navigation, buttons, numeric labels and compact eyebrow labels can stay a clearly readable understated sans-serif related to the thin rounded official wordmark. No faux calligraphy, no heavy bold, no playful lettering. Actual wordmark assets must look distinctive and accurate.
+Every existing Polish text remains exactly unchanged, including "Wnętrza dopasowane do Ciebie.", "Przestrzenie z charakterem", "Projektujemy wokół Ciebie.", "Od pierwszej rozmowy do projektu", "Dobrze wiedzieć", "Porozmawiajmy o Twoim wnętrzu." Keep full long page and footer visible. No new content. No UI overlays copied from image 4. Output just updated complete static website mockup.
+
+WARIANT 02 - pełny prompt:
+Use case: precise-object-edit, brand identity and typography update.
+EDIT TARGET: image 1, approved Primo Studio ONE-SCREEN full-bleed living-room homepage. Image 2 is actual official Instagram monogram, image 3 actual official wordmark "Primo Studio", image 4 reference for Instagram editorial serif typography.
+Only branding and typography may change. Keep full photographic composition, natural lighting, all furniture, plants, warm brown tones, screenshot landscape dimensions, bottom strip with two cream horizontal lines, four TWO-LINE navigation links and two tiny sunburst separators unchanged. No solid panels or new sections.
+Top branding: replace the existing widely spaced uppercase "PRIMO STUDIO" with the official exact thin rounded geometric wordmark from image 3, title case "Primo Studio", cream colored directly on the photo. Add the actual monogram from image 2 as a cream cutout immediately to the LEFT of the centered wordmark in one compact horizontal lockup. No cocoa colored rectangular background here; directly overlay the cream mark and lettering on the photograph. Center entire lockup together near existing top position. Monogram should be visually 55 to 65px tall in the 1586px-wide mockup, modest and proportional; wordmark about 280px wide. Copy emblem faithfully, do not invent a symbol or use ordinary P letters. Preserve its exact tall outer rectangular structure, mirrored upper and lower interlocking ovals, middle divider and negative spaces. Keep "ARCHITEKTURA WNĘTRZ" subline below lockup, centered, cream, small readable sans.
+Hero typography: replace the current thin generic sans-serif hero lettering with the elegant, high-contrast, expressive editorial SERIF character from image 4 ("Nasza misja?"): delicate varying strokes and organic curved serifs, refined warm book typography, similar studio brand rather than generic Times New Roman. Keep the headline in the SAME center position with approximate existing footprint and same three-line wording:
+"Wnętrza"
+"dopasowane"
+"do Ciebie."
+Maintain excellent photographic contrast and generous spacing. Supporting line "Estetyka. Funkcjonalność. Twój styl życia." should be a smaller readable serif matching paragraph style in image 4. Do not change copy.
+Bottom strip MUST retain approved small sturdy rounded sans serif two-line navigation, which is intentionally distinct from headline for usability and matches our previous footer reference. Keep its exact labels:
+"Nasze" / "projekty";
+"Poznaj" / "studio";
+"Jak" / "pracujemy";
+"Porozmawiajmy" / "o wnętrzu".
+Keep their exact positions and two decorative sunburst separators. No arrows, no new individual underlines, no large link titles, no solid band.
+All Polish diacritics accurate, identical copy elsewhere. Brand assets exact, faithful, title-case official wordmark rather than letterspaced generic brand text. No crop or changes to photograph. Output one updated screenshot only.
+
