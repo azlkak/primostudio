@@ -11,7 +11,7 @@ function positionHeadlineBehindSofa() {
   const headline = cover.querySelector(".cover-headline");
   const mainText = cover.querySelector(".headline-main");
   const fontSize = parseFloat(getComputedStyle(mainText).fontSize);
-  const top = sofaTop + fontSize * .25 - headline.offsetHeight;
+  const top = sofaTop + fontSize * .13 - headline.offsetHeight;
   cover.style.setProperty("--headline-top", `${Math.max(150, top)}px`);
 }
 new ResizeObserver(positionHeadlineBehindSofa).observe(cover);
