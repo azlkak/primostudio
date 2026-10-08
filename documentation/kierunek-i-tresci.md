@@ -2,9 +2,9 @@
 
 ## Strona główna
 
-Pełnoekranowa okładka dziennika. Ciepłe wnętrze w tle, mniejsze logo z delikatnym pojawieniem się, nazwa Primo Studio i opis Architektura wnętrz pod nazwą. Monogram ma wysokość całego bloku nazwy z podpisem. Instagram, Facebook i telefon po lewej u góry. Kremowe CTA „Porozmawiajmy” po prawej otwiera panel kontaktu.
+Pełnoekranowa okładka dziennika. Ciepłe wnętrze w tle, logo w poprzednim, większym rozmiarze z wyraźniejszym pojawieniem się, nazwa Primo Studio i opis Architektura wnętrz pod nazwą. Przywrócone proporcje: monogram szerokości 27 px, napis szerokości 200 px na komputerze. Ikonka Facebooka ma ten sam kremowy kolor i krycie co pozostałe. Instagram, Facebook i telefon po lewej u góry. Kremowe CTA „Porozmawiajmy” po prawej otwiera panel kontaktu.
 
-Hasło: mniejsze „Twój rytm życia.” i większe „Twoje wnętrze.”. Na dole mocniejszy półprzezroczysty panel w kolorze kakao, grubsze linie i nawigacja do podstron. Logo, hasło i nawigacja pojawiają się etapami. Przy ograniczeniu ruchu w systemie animacje są wyłączone.
+Hasło: mniejsze „Twój rytm życia.” i większe „Twoje wnętrze.”. Na dole mocniejszy półprzezroczysty panel w kolorze kakao, grubsze linie i nawigacja do podstron. Logo, hasło i nawigacja pojawiają się etapami przez około 4 sekundy, po załadowaniu zdjęcia i fontów. Przy ograniczeniu ruchu w systemie animacje są wyłączone.
 
 ## Podstrony do opracowania
 
