@@ -1,3 +1,15 @@
+// Begin visible entrances after the hero and fonts have finished loading.
+const cover = document.querySelector(".cover");
+async function startCoverMotion() {
+  await document.fonts.ready;
+  requestAnimationFrame(() => {
+    cover.classList.add("motion-ready");
+    document.documentElement.classList.remove("motion-pending");
+  });
+}
+if (document.readyState === "complete") startCoverMotion();
+else window.addEventListener("load", startCoverMotion, { once: true });
+
 // Verified contact details only. Fill the two empty values when supplied by the studio.
 const studioContact = { email: "", facebook: "" };
 
