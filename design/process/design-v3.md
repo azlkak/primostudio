@@ -35,3 +35,5 @@ Formy są wykonane w CSS i SVG, bez zmiany plików zdjęć. Zdjęcia i białe sz
 - Odstępy etapów są ciaśniejsze: na komputerze 24 px nad i 44 px pod etapem, na telefonie 22 px nad i 26 px pod etapem. Wysokość wynika z treści i zdjęcia, bez sztucznej minimalnej wysokości sekcji.
 - Lekka stopka na podstronie procesu: logo, nawigacja do czterech podstron, telefon i Instagram. Bez powtarzania dużego CTA. Link do postu o procesie usunięty ze stopki na prośbę użytkownika; źródło pozostaje w dokumentacji.
 - Stopka zachowuje ciepłą paletę i cienkie podziały; na telefonie układa się w kolumnę. Logo reaguje na motyw dzień/noc.
+
+- Breadcrumbs pod nagłówkiem strony: „Strona główna / Proces projektowania”. Strona główna jest linkiem, bieżąca podstrona ma oznaczenie `aria-current="page"`. Dyskretna typografia w obu motywach, układ zawija się na wąskich ekranach.
