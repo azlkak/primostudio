@@ -32,8 +32,10 @@ Formy są wykonane w CSS i SVG, bez zmiany plików zdjęć. Zdjęcia i białe sz
 - Usunięty widoczny podpis ilustracji oraz poziomy spis etapów. Pochodzenie zdjęć pozostaje udokumentowane w v2 i opisach alternatywnych.
 - Nagłówki bez kropek na końcu. Nie dodajemy linków „Następny etap” ani podobnych odnośników pod opisami.
 - Górne i dolne CTA „Porozmawiajmy” korzystają z tego samego panelu kontaktu co okładka. Na jasnym tle przycisk ma kontrastową barwę kakao; w nocy kremową.
-- Odstępy etapów są ciaśniejsze: na komputerze 12 px nad i 16 px pod etapem, na telefonie 14 px nad i 14 px pod etapem. Przejście między etapami zajmuje około 28 px zamiast poprzednich 68 px na komputerze i 48 px na telefonie. Otwarcie i sekcja kontaktu mają także mniejsze odstępy. Wysokość wynika z treści i zdjęcia, bez sztucznej minimalnej wysokości sekcji.
+- Odstępy etapów są ciaśniejsze: na komputerze 24 px nad i 44 px pod etapem, na telefonie 22 px nad i 26 px pod etapem. Wysokość wynika z treści i zdjęcia, bez sztucznej minimalnej wysokości sekcji.
 - Lekka stopka na podstronie procesu: logo, nawigacja do czterech podstron, telefon i Instagram. Bez powtarzania dużego CTA. Link do postu o procesie usunięty ze stopki na prośbę użytkownika; źródło pozostaje w dokumentacji.
 - Stopka zachowuje ciepłą paletę i cienkie podziały; na telefonie układa się w kolumnę. Logo reaguje na motyw dzień/noc.
 
 - Breadcrumbs pod nagłówkiem strony: „Strona główna / Proces projektowania”. Strona główna jest linkiem, bieżąca podstrona ma oznaczenie `aria-current="page"`. Dyskretna typografia w obu motywach, układ zawija się na wąskich ekranach.
+
+- Po porównaniu wariantu ciaśniejszego użytkownik wybrał poprzednie, większe odstępy (jak w process-6). Przywrócono je bez zmian w treści, kadrach i nawigacji.
