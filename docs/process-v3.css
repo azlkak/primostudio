@@ -7,7 +7,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 32px; }
 .breadcrumbs a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .breadcrumbs [aria-current="page"] { opacity: .65; }
 .breadcrumbs li > span[aria-hidden] { opacity: .4; }
-.process-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8%; align-items: center; min-height: 610px; padding-bottom: 36px; }
+.process-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8%; align-items: center; min-height: 0; padding-bottom: 20px; }
 .process-intro h1 { font-size: clamp(48px, 5.8vw, 86px); font-weight: 300; line-height: 1.04; letter-spacing: -.065em; margin: 0 0 32px; }
 .process-lead { max-width: 380px; font-size: 19px; line-height: 1.6; margin: 0 0 32px; }
 .process-intro-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
@@ -21,7 +21,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 32px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .process-steps { position: relative; margin: 0; padding: 0; list-style: none; }
 .process-steps::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: var(--process-line); }
-.process-steps li { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 16%; padding: 24px 0 44px; min-height: 0; }
+.process-steps li { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 16%; padding: 12px 0 16px; min-height: 0; }
 .step-copy { grid-column: 1; grid-row: 1; padding-right: 20px; }
 .step-media { grid-column: 2; grid-row: 1; margin: 0; width: 100%; max-width: 460px; justify-self: end; aspect-ratio: 4 / 5; overflow: hidden; background: #b7a28b; }
 .step-media img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .8s ease; }
@@ -39,7 +39,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 32px; }
 .process-steps p { font-size: 17px; line-height: 1.7; margin: 0; max-width: 390px; }
 .process-steps .eyebrow { font-size: 10px; letter-spacing: .17em; margin-bottom: 22px; }
 .process-steps .step-label { display: inline-block; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--process-line); border-radius: 20px; margin: 0 0 14px; }
-.process-contact { display: flex; align-items: center; justify-content: space-between; gap: 36px; border-top: 1px solid var(--process-line); margin-top: 32px; padding: 36px 0 40px; }
+.process-contact { display: flex; align-items: center; justify-content: space-between; gap: 36px; border-top: 1px solid var(--process-line); margin-top: 16px; padding: 24px 0 28px; }
 .process-contact h2 { font-size: clamp(38px, 4.8vw, 68px); font-weight: 300; line-height: 1.06; letter-spacing: -.055em; margin: 0; }
 .process-contact .eyebrow { margin-bottom: 20px; }
 .process-contact-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 18px; }
@@ -51,12 +51,12 @@ html { scroll-behavior: smooth; scroll-padding-top: 32px; }
 @media (max-width: 850px) {
   .process-content { padding-top: 48px; }
   .breadcrumbs { margin-top: -24px; margin-bottom: 24px; }
-  .process-hero { gap: 36px; padding-bottom: 28px; min-height: auto; }
+  .process-hero { gap: 28px; padding-bottom: 20px; min-height: auto; }
   .process-intro h1 { font-size: clamp(38px, 5.6vw, 48px); }
   .process-lead { font-size: 16px; margin-bottom: 20px; }
   .process-hero-arch { height: 370px; }
   .process-hero-detail { height: auto; }
-  .process-steps li { gap: 12%; min-height: 0; padding: 20px 0 32px; }
+  .process-steps li { gap: 12%; min-height: 0; padding: 12px 0 14px; }
   .step-copy, .process-steps li:nth-child(even) .step-copy { padding: 0; }
   .process-steps h2 { font-size: 34px; }
   .process-steps p { font-size: 16px; }
@@ -70,13 +70,13 @@ html { scroll-behavior: smooth; scroll-padding-top: 32px; }
   .process-hero-detail { width: 42%; height: auto; }
   .process-hero-caption { font-size: 9px; margin-left: 33%; }
   .process-steps::before { left: 18px; }
-  .process-steps li { display: flex; flex-direction: column; align-items: stretch; gap: 22px; padding: 22px 0 26px 48px; min-height: 0; }
-  .step-number { top: 20px; left: 0; width: 36px; height: 36px; font-size: 11px; }
+  .process-steps li { display: flex; flex-direction: column; align-items: stretch; gap: 22px; padding: 14px 0 14px 48px; min-height: 0; }
+  .step-number { top: 12px; left: 0; width: 36px; height: 36px; font-size: 11px; }
   .process-steps .eyebrow { font-size: 9px; letter-spacing: .1em; margin-bottom: 16px; padding-top: 6px; }
   .process-steps h2 { font-size: clamp(29px, 7.5vw, 40px); margin-bottom: 18px; }
   .process-steps p { font-size: 15px; line-height: 1.65; }
   .step-media { max-width: 360px; align-self: center; }
-  .process-contact { align-items: flex-start; flex-direction: column; gap: 24px; margin-top: 24px; }
+  .process-contact { align-items: flex-start; flex-direction: column; gap: 24px; margin-top: 16px; }
   .process-contact-actions { align-items: flex-start; }
   .process-contact .eyebrow { font-size: 9px; }
   .process-contact h2 { font-size: clamp(34px, 8vw, 48px); }
