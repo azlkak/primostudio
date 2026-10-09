@@ -39,3 +39,5 @@ Formy są wykonane w CSS i SVG, bez zmiany plików zdjęć. Zdjęcia i białe sz
 - Breadcrumbs pod nagłówkiem strony: „Strona główna / Proces projektowania”. Strona główna jest linkiem, bieżąca podstrona ma oznaczenie `aria-current="page"`. Dyskretna typografia w obu motywach, układ zawija się na wąskich ekranach.
 
 - Po porównaniu wariantu ciaśniejszego użytkownik wybrał poprzednie, większe odstępy (jak w process-6). Przywrócono je bez zmian w treści, kadrach i nawigacji.
+
+- Zrównoważenie zdjęć: otwarcie ma zdjęcie po prawej, a etapy zaczynają się od zdjęcia po lewej (01, 03, 05); 02 i 04 mają zdjęcie po prawej. Na telefonie zachowany jest porządek opis → zdjęcie, a większe odstępy pozostają bez zmian.
