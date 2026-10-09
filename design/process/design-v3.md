@@ -33,5 +33,5 @@ Formy są wykonane w CSS i SVG, bez zmiany plików zdjęć. Zdjęcia i białe sz
 - Nagłówki bez kropek na końcu. Nie dodajemy linków „Następny etap” ani podobnych odnośników pod opisami.
 - Górne i dolne CTA „Porozmawiajmy” korzystają z tego samego panelu kontaktu co okładka. Na jasnym tle przycisk ma kontrastową barwę kakao; w nocy kremową.
 - Odstępy etapów są ciaśniejsze: na komputerze 24 px nad i 44 px pod etapem, na telefonie 22 px nad i 26 px pod etapem. Wysokość wynika z treści i zdjęcia, bez sztucznej minimalnej wysokości sekcji.
-- Lekka stopka na podstronie procesu: logo, nawigacja do czterech podstron, telefon i Instagram. Bez powtarzania dużego CTA. Link do postu o procesie przeniesiony do dolnej linii stopki.
+- Lekka stopka na podstronie procesu: logo, nawigacja do czterech podstron, telefon i Instagram. Bez powtarzania dużego CTA. Link do postu o procesie usunięty ze stopki na prośbę użytkownika; źródło pozostaje w dokumentacji.
 - Stopka zachowuje ciepłą paletę i cienkie podziały; na telefonie układa się w kolumnę. Logo reaguje na motyw dzień/noc.
