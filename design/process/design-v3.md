@@ -22,6 +22,7 @@ Formy są wykonane w CSS i SVG, bez zmiany plików zdjęć. Zdjęcia i białe sz
 
 ## Pliki
 
-- `docs/proces.html` — układ i wektor maski formy rzeźbiarskiej.
+- `docs/proces.html` — układ.
+- `docs/assets/process-sculpture-mask.svg` — wektor maski formy rzeźbiarskiej.
 - `docs/process-v3.css` — kadry i proporcje.
 - `design/archive/process-v2/proces.html` i zachowany `docs/process-v2.css` — poprzedni wariant.
