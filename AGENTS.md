@@ -8,4 +8,5 @@
 - Strona ma działać na GitHub Pages w podkatalogu repo. Stosuj względne odnośniki i nie dodawaj backendu bez zlecenia użytkownika.
 - Sprawdzaj wygląd na komputerze i telefonie, odnośniki, dostępność klawiaturą i ograniczenie animacji.
 - `docs/` to katalog publikacji. Makiety i ustalenia przechowuj w `design/` oraz `documentation/`.
+- Na podstronach rozwijaj miękkie kadry zdjęć: łuki, owale i asymetryczne organiczne kształty; zestawiaj tekst i zdjęcia naprzemiennie. Proces prowadź przez numerowane etapy z osobnym obrazem przy każdym. Szczegóły i prompty: `design/process/design-v2.md`.
 - Publikuj wyłącznie materiały strony; nie dodawaj sekretów, danych kont ani prywatnych danych klientów.
