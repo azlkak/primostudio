@@ -9,7 +9,8 @@
   <link rel="icon" href="assets/monogram-cocoa.svg" type="image/svg+xml">
   <script src="theme.js?v=cover-5"></script>
   <link rel="stylesheet" href="styles.css?v=cover-5">
-  <link rel="stylesheet" href="process-v3.css?v=process-3">
+  <link rel="stylesheet" href="process-v3.css?v=process-4">
+  <script src="contact.js?v=process-4" defer></script>
 </head>
 <body class="interior-page">
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -25,7 +26,7 @@
         <p class="eyebrow">Krok po kroku, razem z Tobą</p>
         <h1>Proces<br>projektowania</h1>
         <p class="process-lead">Zaczynamy od Ciebie. Potem nadajemy Twoim potrzebom kształt — od pierwszej rozmowy po realizację wnętrza.</p>
-        <a class="process-explore" href="#etapy">Poznaj etapy <span aria-hidden="true">↓</span></a>
+        <div class="process-intro-actions"><a class="consultation header-cta process-cta" href="kontakt.html" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog"><span>Porozmawiajmy</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg></a><a class="process-explore" href="#etapy">Poznaj etapy <span aria-hidden="true">↓</span></a></div>
       </div>
       <div class="process-hero-media" aria-hidden="true">
         <img class="process-hero-arch" src="assets/hero-day-v2.webp" width="4901" height="3065" alt="">
@@ -62,9 +63,30 @@
     </ol>
     <section class="process-contact" id="porozmawiajmy" aria-labelledby="process-contact-title">
       <div><p class="eyebrow">Pierwszy krok należy do Ciebie</p><h2 id="process-contact-title">Porozmawiajmy<br>o Twoim wnętrzu</h2></div>
-      <div class="process-contact-actions"><a class="consultation" href="kontakt.html"><span>Napisz do nas</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg></a><a class="process-phone" href="tel:+48884021024">lub zadzwoń: +48 884 021 024</a></div>
+      <div class="process-contact-actions"><a class="consultation header-cta process-cta" href="kontakt.html" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog"><span>Porozmawiajmy</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg></a><a class="process-phone" href="tel:+48884021024">lub zadzwoń: +48 884 021 024</a></div>
     </section>
     <a class="process-source" href="https://www.instagram.com/p/DFr9vCkoxJt/" target="_blank" rel="noopener noreferrer">Poznaj proces na Instagramie <span aria-hidden="true">↗</span><span class="sr-only"> (nowa karta)</span></a>
   </main>
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-description">
+    <button class="dialog-close" type="button" aria-label="Zamknij panel kontaktu" autofocus><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
+    <p class="eyebrow">Zacznijmy od rozmowy</p>
+    <h2 id="contact-title">Napisz do nas</h2>
+    <p class="contact-description" id="contact-description">Opowiedz nam o swoim wnętrzu. Wybierz wygodny sposób kontaktu.</p>
+    <div class="contact-options">
+      <a href="https://www.instagram.com/primo.studiodesign/" target="_blank" rel="noopener noreferrer"><span>Instagram<small>@primo.studiodesign</small></span><span aria-hidden="true">↗</span></a>
+      <a href="tel:+48884021024"><span>Zadzwoń<small>+48 884 021 024</small></span><span aria-hidden="true">↗</span></a>
+      <a data-email aria-disabled="true"><span>E-mail<small data-email-label>W przygotowaniu</small></span><span aria-hidden="true">↗</span></a>
+    </div>
+    <form class="contact-form" id="contact-form">
+      <h3>Opowiedz nam o swoim projekcie</h3>
+      <div class="form-row">
+        <label>Twoje imię<input name="name" autocomplete="given-name" required maxlength="100" placeholder="Jak się do Ciebie zwracać?"></label>
+        <label>Twój e-mail<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="Adres do odpowiedzi"></label>
+      </div>
+      <label>Wiadomość<textarea name="message" rows="3" required maxlength="4000" placeholder="Jakie wnętrze chcesz zaprojektować?"></textarea></label>
+      <button class="form-submit" type="submit" disabled>Przygotuj wiadomość <span aria-hidden="true">→</span></button>
+      <p class="form-note" id="form-note" role="status">Kontakt e-mail w przygotowaniu. Zadzwoń lub napisz na Instagramie.</p>
+    </form>
+  </dialog>
 </body>
 </html>

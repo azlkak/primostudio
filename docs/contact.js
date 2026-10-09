@@ -1,5 +1,6 @@
 // Begin visible entrances after the hero and fonts have finished loading.
 const cover = document.querySelector(".cover");
+if (cover) {
 function positionHeadlineBehindSofa() {
   const photo = cover.querySelector(document.documentElement.dataset.theme === "night" ? ".hero-photo.hero-night" : ".hero-photo.hero-day");
   if (!photo.naturalWidth) return;
@@ -36,6 +37,8 @@ document.querySelectorAll("[data-theme-toggle]").forEach(button => {
     }));
   });
 });
+
+}
 
 // Verified contact details only. Fill the two empty values when supplied by the studio.
 const studioContact = { email: "", facebook: "" };
