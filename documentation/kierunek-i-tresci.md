@@ -4,7 +4,7 @@
 
 Pełnoekranowa okładka dziennika. Ciepłe wnętrze w tle, logo w poprzednim, większym rozmiarze z wyraźniejszym pojawieniem się, nazwa Primo Studio i opis Architektura wnętrz pod nazwą. Przywrócone proporcje: monogram szerokości 27 px, napis szerokości 200 px na komputerze. Ikonka Facebooka ma ten sam kremowy kolor i krycie co pozostałe. Instagram, Facebook i telefon po lewej u góry. Kremowe CTA „Porozmawiajmy” po prawej otwiera panel kontaktu.
 
-Hasło jest ustawione niżej i częściowo zasłonięte konturem sofy, z osobnymi warstwami pierwszego planu w obu motywach. Pozycja dopasowuje się do kadrowania zdjęcia i wielkości ekranu, aby zachować czytelność. Hasło: mniejsze „Twój rytm życia.” i większe „Twoje wnętrze.”. Na dole mocniejszy półprzezroczysty panel w kolorze kakao, grubsze linie i nawigacja do podstron. Logo, hasło i nawigacja pojawiają się etapami przez około 4 sekundy, po załadowaniu zdjęcia i fontów. W nagłówku, po lewej stronie CTA, znajduje się przełącznik z samymi ikonami słońca i księżyca, bez napisów i opcji Auto. Domyślnie motyw śledzi preferencję systemową; ręczny wybór ma pierwszeństwo i jest zapamiętywany w przeglądarce. Dzień i noc korzystają z dwóch nowych obrazów dostarczonych przez użytkownika: hero-day-v2.webp (4901 × 3065) i hero-night-v2.webp (5049 × 3167). Zachowano pełną rozdzielczość, kodując obrazy w WebP na potrzeby strony. Obrazy przechodzą między sobą płynnie; logo i hasło powtarzają wejście po zmianie widoku. Motyw obejmuje także podstrony i panel kontaktu. Przy ograniczeniu ruchu w systemie animacje są wyłączone.
+Hasło jest ustawione niżej i częściowo zasłonięte konturem sofy, z osobnymi warstwami pierwszego planu w obu motywach. Pozycja dopasowuje się do kadrowania zdjęcia i wielkości ekranu, aby zachować czytelność. Hasło: mniejsze „Twój rytm życia” i większe „Twoje wnętrze”, bez końcowych kropek. Na dole mocniejszy półprzezroczysty panel w kolorze kakao, grubsze linie i nawigacja do podstron. Logo, hasło i nawigacja pojawiają się etapami przez około 4 sekundy, po załadowaniu zdjęcia i fontów. W nagłówku, po lewej stronie CTA, znajduje się przełącznik z samymi ikonami słońca i księżyca, bez napisów i opcji Auto. Domyślnie motyw śledzi preferencję systemową; ręczny wybór ma pierwszeństwo i jest zapamiętywany w przeglądarce. Dzień i noc korzystają z dwóch nowych obrazów dostarczonych przez użytkownika: hero-day-v2.webp (4901 × 3065) i hero-night-v2.webp (5049 × 3167). Zachowano pełną rozdzielczość, kodując obrazy w WebP na potrzeby strony. Obrazy przechodzą między sobą płynnie; logo i hasło powtarzają wejście po zmianie widoku. Motyw obejmuje także podstrony i panel kontaktu. Przy ograniczeniu ruchu w systemie animacje są wyłączone.
 
 ## Podstrony do opracowania
 
@@ -17,3 +17,15 @@ Hasło jest ustawione niżej i częściowo zasłonięte konturem sofy, z osobnym
 ## Materiały
 
 Zdjęcie hero jest ilustracją projektu, nie zdjęciem realizacji Primo Studio. Logo SVG jest ręcznym odtworzeniem na podstawie referencji z Instagramu. Makiety w `design/makiety/` pokazują wcześniejsze kierunki, a `Primo-hero-A-logo-highres-v2.png` jest najnowszym odniesieniem.
+
+## Aktualizacja 16 listopada 2026
+
+Na okładce usunięto końcowe kropki z obu części hasła i zastąpiono cztery numery nawigacji ozdobnymi gwiazdkami SVG w bieżącym kolorze. Ozdoby są ukryte przed czytnikami ekranu. Pozostałe sekcje procesu nadal używają numerów etapów.
+
+Propozycje do omówienia dla mocniejszej okładki magazynu (jeszcze niewdrożone):
+- większy logotyp Primo Studio w górnej części, z zachowaniem oryginalnego rysunku marki;
+- dyskretna sygnatura „Primo Journal / Architektura i wnętrza” i oznaczenie „Wydanie 01”;
+- dwa lub trzy krótkie zajawki jak na okładce, połączone z istniejącymi podstronami: „Kinga i Viktoria — poznaj założycielki”, „Od pierwszej rozmowy do realizacji”, „Wnętrza z osobistym charakterem”;
+- zróżnicowanie typografii z dużym hasłem, małym kursywnym wprowadzeniem i drobnymi podpisami, wspólna siatka i cienkie linie.
+
+Najpierw duży logotyp i dwie zajawki; zdjęcie i kontrast tekstu pozostają najważniejsze. Nie dodawać fikcyjnych nagród, cytatów prasowych, dat aktualnych wydań ani elementów sugerujących realne czasopismo bez ustalenia z użytkownikiem.
