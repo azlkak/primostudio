@@ -32,6 +32,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 32px; }
 .shape-sculpture { border-radius: 24% 22% 30% 18%; -webkit-mask: url("assets/process-sculpture-mask.svg") center / 100% 100% no-repeat; mask: url("assets/process-sculpture-mask.svg") center / 100% 100% no-repeat; }
 .shape-quadrant { max-width: 440px; aspect-ratio: 1; border-radius: 46% 8% 46% 8%; }
 .shape-portal { max-width: 400px; aspect-ratio: 3 / 4; border-radius: 60% 5% 5% 5% / 45% 4% 4% 4%; }
+.shape-finish { aspect-ratio: 4 / 5; border-radius: 18%; -webkit-mask: url("assets/process-finish-mask.svg") center / 100% 100% no-repeat; mask: url("assets/process-finish-mask.svg") center / 100% 100% no-repeat; }
 .process-steps li:nth-child(even) .step-copy { grid-column: 1; padding: 0 20px 0 0; }
 .process-steps li:nth-child(even) .step-media { grid-column: 2; justify-self: end; }
 .step-number { position: absolute; z-index: 1; top: calc(50% - 48px); left: calc(50% - 24px); display: grid; place-items: center; width: 48px; height: 48px; font-size: 13px; border: 1px solid var(--process-line); border-radius: 50%; background: var(--process-paper); }
