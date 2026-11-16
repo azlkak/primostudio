@@ -49,3 +49,7 @@ Na prośbę użytkownika dodano „Odbiór i efekt końcowy” po opcjonalnym na
 Zdjęcie powstaje z `process-concept-v2.webp`: ten sam kadr, okno, drewniane belki i łuk, ale zrealizowane wyposażenie i wykończone powierzchnie zamiast szkiców. To ilustracja koncepcji, nie dokumentacja realnej realizacji klienta. Źródło i prompt w `design-v2.md`.
 
 Etap 06 ma zdjęcie po prawej zgodnie z rytmem naprzemiennym. Nowa miękka forma z zaokrąglonym ukośnym narożnikiem nawiązuje do obrobionego kamienia i detalu architektonicznego. Maska: `docs/assets/process-finish-mask.svg`. Dotychczasowe odstępy, typografia i układ mobilny pozostają zachowane.
+
+### Zaakceptowany wariant z ludźmi
+
+Etap 06 nosi teraz krótszą nazwę „Odbiór końcowy”. Użytkownik zaakceptował wariant ilustracji z dwiema anonimowymi osobami: jedną na sofie i drugą przy ladzie. Plik strony: `docs/assets/process-finished-people-v1.webp`. Wariant bez ludzi pozostaje zachowany jako `process-finished-v1.webp`. Układ, maska i opis etapu bez zmian.

@@ -63,3 +63,13 @@ Use case: precise-object-edit. Edit target: supplied photograph with white conce
 - Pełny prompt: `finished-v1-prompt.txt`.
 - Ten sam pokój, okno, belki, łuk i kadr. Białe szkice zrealizowane jako fizyczne meble i wykończenie; usunięto narzędzia i ślady budowy.
 - Ilustracja procesu, nie fotografia rzeczywistej realizacji klienta.
+
+### finished_people_v1 — zaakceptowany wariant etapu 06
+
+- Narzędzie: wbudowane image_gen, edycja precise-object-edit.
+- Cel edycji: `docs/assets/process-finished-v1.webp`.
+- Dodano dwie anonimowe osoby w skali wnętrza: siedzącą na sofie oraz stojącą przy ladzie. Nie przedstawiają prawdziwych założycielek ani klientów.
+- Oryginał: `/Users/a1/.codex/generated_images/01a111af-a205-7db1-bab6-c47e2bb3be1e/exec-41845183-6cb0-43a3-ab1b-78cfa6a95c06.png`.
+- Plik strony: `docs/assets/process-finished-people-v1.webp`; konwersja bez retuszu i zmiany wymiarów.
+- Pełny prompt: `finished-people-v1-prompt.txt`.
+- Zaakceptowany przez użytkownika po pokazaniu podglądu; wersja bez ludzi zachowana.
