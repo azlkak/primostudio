@@ -1,7 +1,7 @@
 # Primo Studio — zasady pracy
 
 - Rozwijaj kierunek A: okładka dziennika, jeden główny ekran, ciepłe zdjęcie, kremowa typografia, podstrony zamiast kolejnych sekcji na stronie głównej.
-- Zachowaj tekst „Twój rytm życia. Twoje wnętrze.”, mniejszy kursywny początek i większą część końcową, dopóki użytkownik nie zleci zmiany.
+- Zachowaj tekst „Twój rytm życia / Twoje wnętrze” bez kropek na końcu obu części, mniejszy kursywny początek i większą część końcową, dopóki użytkownik nie zleci zmiany.
 - Używaj gładkich plików SVG w `docs/assets/`; nie zastępuj logo tekstem w zwykłym foncie ani starszymi, schodkowymi wektorami.
 - Zostawiaj starsze makiety w `design/` i dodawaj kolejne wersje zamiast nadpisywać archiwum.
 - Nie wymyślaj realizacji, opinii, liczb, nazwisk, danych kontaktowych ani zakresu oferty. Hero to ilustracja koncepcji.
