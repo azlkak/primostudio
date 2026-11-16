@@ -6,7 +6,7 @@ Rozwinięcie v2 po uwadze użytkownika: więcej różnych form, bez powtarzania 
 
 Łączymy geometrię architektury z organicznymi liniami wyposażenia: łuk otworu, miękkie narożniki zabudowy, obrys kamienia, rzeźbiarską falę mebla. Spójność budują łagodne krzywizny, ciepła paleta i spokojne proporcje. Każda forma ma własną sylwetkę; nie powtarzamy jednego łuku lub owalu przy kilku etapach. Kadry mają różne proporcje, a tekst pozostaje przy wspólnej osi procesu.
 
-## Siedem kadrów
+## Kadry
 
 | Miejsce | Forma | Powiązanie z designem |
 | --- | --- | --- |
@@ -41,3 +41,11 @@ Formy są wykonane w CSS i SVG, bez zmiany plików zdjęć. Zdjęcia i białe sz
 - Po porównaniu wariantu ciaśniejszego użytkownik wybrał poprzednie, większe odstępy (jak w process-6). Przywrócono je bez zmian w treści, kadrach i nawigacji.
 
 - Zrównoważenie zdjęć: otwarcie ma zdjęcie po prawej, a etapy zaczynają się od zdjęcia po lewej (01, 03, 05); 02 i 04 mają zdjęcie po prawej. Na telefonie zachowany jest porządek opis → zdjęcie, a większe odstępy pozostają bez zmian.
+
+## Etap 06 — aktualizacja 16 listopada 2026
+
+Na prośbę użytkownika dodano „Odbiór i efekt końcowy” po opcjonalnym nadzorze. Końcowy opis obejmuje obejrzenie wnętrza, sprawdzenie zgodności z projektem i detali oraz omówienie ostatnich poprawek.
+
+Zdjęcie powstaje z `process-concept-v2.webp`: ten sam kadr, okno, drewniane belki i łuk, ale zrealizowane wyposażenie i wykończone powierzchnie zamiast szkiców. To ilustracja koncepcji, nie dokumentacja realnej realizacji klienta. Źródło i prompt w `design-v2.md`.
+
+Etap 06 ma zdjęcie po prawej zgodnie z rytmem naprzemiennym. Nowa miękka forma z zaokrąglonym ukośnym narożnikiem nawiązuje do obrobionego kamienia i detalu architektonicznego. Maska: `docs/assets/process-finish-mask.svg`. Dotychczasowe odstępy, typografia i układ mobilny pozostają zachowane.

@@ -53,3 +53,13 @@ Use case: precise-object-edit. Asset type: portrait conceptual photo for stage 5
 
 Use case: precise-object-edit. Edit target: supplied photograph with white concept linework. Primary request: add substantially more elegant WHITE architectural sketch interventions, especially in the currently bare foreground and across walls, making the renovation concept much more visibly transformative. Preserve the underlying room photograph, exact geometry, tall left window, rough brick/plaster, arch opening, camera, warm daylight, surveying table/tools, and existing drawn sofa/table/pendant/shelves. Add clean bright ivory-white outline drawings in believable perspective: a second inner curved reveal outlining a newly finished arch, wall panel frames and skirting/baseboard lines along the room, a slim ceiling light track with spotlights, curtains framing the left window, a larger sculptural curved island/console along the lower right foreground with a pot and olive plant as outlined objects, and a sculptural lounge chair left-midground. Use some long sweeping curves to tie the design together, similar to an architect drawing a proposed fitout over a construction photo. Furniture and finishes remain linework, transparent interiors so the renovation photograph stays visible. More present and easy to see than before, well-spaced and coherent, no tangled lines, no dimensions, no written labels, no logos, UI, frames or watermark. Portrait 4:5. Illustrative concept, not a real studio project.
 
+
+### finished_v1 — etap 06, 16 listopada 2026
+
+- Narzędzie: wbudowane image_gen, edycja sketch-to-render.
+- Cel edycji: `docs/assets/process-concept-v2.webp` (etap 03).
+- Oryginał wygenerowanego obrazu: `/Users/a1/.codex/generated_images/01a111af-a205-7db1-bab6-c47e2bb3be1e/exec-b2b7b500-e03a-430a-a57b-52aecd74924f.png`.
+- Plik strony: `docs/assets/process-finished-v1.webp`; konwersja PNG do WebP bez retuszu i zmiany wymiarów.
+- Pełny prompt: `finished-v1-prompt.txt`.
+- Ten sam pokój, okno, belki, łuk i kadr. Białe szkice zrealizowane jako fizyczne meble i wykończenie; usunięto narzędzia i ślady budowy.
+- Ilustracja procesu, nie fotografia rzeczywistej realizacji klienta.
