@@ -47,13 +47,27 @@
     frame.className = 'project-frame';
     const loaded = new Promise(resolve => {
       const timeout = setTimeout(() => resolve(false), 12000);
-      frame.addEventListener('load', () => {
+      frame.addEventListener('load', async () => {
+        const projectDocument = frame?.contentDocument;
+        const hero = projectDocument?.querySelector('[data-photo="0"]');
+        if (!projectDocument?.querySelector('.project-story') || !hero) {
+          clearTimeout(timeout);
+          resolve(false);
+          return;
+        }
+        // Prepare the real scene while the enlarged photograph still covers it.
+        projectDocument.documentElement.classList.toggle('project-entering', animate && !reduced.matches);
+        projectDocument.documentElement.style.overflow = 'hidden';
+        await Promise.all([
+          projectDocument.fonts?.ready,
+          hero.decode ? hero.decode().catch(() => {}) : Promise.resolve()
+        ]);
         clearTimeout(timeout);
-        resolve(Boolean(frame?.contentDocument?.querySelector('.project-story')));
+        resolve(hero.complete && hero.naturalWidth > 0);
       }, {once:true});
       frame.addEventListener('error', () => { clearTimeout(timeout); resolve(false); }, {once:true});
     });
-    frame.src = new URL('majdan.html?v=majdan-2', location.href).href;
+    frame.src = new URL('majdan.html?v=majdan-4', location.href).href;
     view.append(frame);
     document.body.append(view);
     document.body.classList.add('project-is-open');
@@ -64,6 +78,7 @@
     const image = new Image();
     image.src = sourceImage.currentSrc || sourceImage.src;
     image.alt = '';
+    if (image.decode) await image.decode().catch(() => {});
     clone.append(image);
     Object.assign(clone.style, {left:`${rect.left}px`,top:`${rect.top}px`,width:`${rect.width}px`,height:`${rect.height}px`});
     document.body.append(clone);
@@ -83,6 +98,17 @@
       }
       frame.contentWindow.scrollTo(0, 0);
       view.classList.add('is-ready');
+      // Paint the decoded scene at full opacity before handing over the image.
+      // Keeping the clone until its fade finishes avoids exposing the portfolio.
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+      frame.contentDocument.documentElement.classList.remove('project-entering');
+      if (animate && !reduced.matches) {
+        animation = clone.animate([{opacity:1},{opacity:0}], {
+          duration:300, easing:'ease-out', fill:'forwards'
+        });
+        await animation.finished;
+      }
+      frame.contentDocument.documentElement.style.overflow = '';
       ownsHistoryEntry = location.hash !== '#majdan';
       if (ownsHistoryEntry) history.pushState({primoProject:'majdan'}, '', '#majdan');
       document.title = 'Majdan — historia wnętrza | Primo Studio';

@@ -20,10 +20,9 @@
     const s = clamp(distance, 0, 4);
     const next = clamp(Math.floor(s + (reduced.matches ? 0 : .15)), 0, 3);
     photos.forEach((photo, i) => {
-      const reveal = i === 0 ? 1 : reduced.matches ? Number(s >= i) : smooth((s - i + .35) / .35);
-      const local = clamp(s - i, 0, 1);
+      const reveal = i === 0 ? 1 : reduced.matches ? Number(s >= i) : clamp((s - i + .85) / .85);
       photo.style.clipPath = `inset(${(1 - reveal) * 100}% 0 0 0)`;
-      photo.style.transform = reduced.matches ? 'none' : `scale(${1 + local * .025})`;
+      photo.style.transform = 'none';
     });
     captions.forEach((caption, i) => {
       const incoming = i === 0 ? 1 : smooth((s - i + .24) / .24);
@@ -71,14 +70,28 @@
   updateChapters();
   // Every description remains in the document. Native scrolling chooses the image.
   const processSteps = [...document.querySelectorAll('[data-process-step]')];
-  const processImage = document.getElementById('step-image');
-  const processFrame = processImage.parentElement;
+  const processFrame = document.querySelector('.process-image-frame');
   const processCaption = document.getElementById('step-caption');
   const processRoot = document.querySelector('.process-layout');
   let processActive = -1;
   let processFrameRequest = 0;
-  let processImageTimer;
-  let processGeneration = 0;
+  processFrame.classList.remove('is-plan', 'is-drawing');
+  const processLayers = processSteps.map((step, index) => {
+    const layer = document.createElement('div');
+    layer.className = 'process-photo-layer';
+    layer.dataset.processPhoto = index;
+    if (step.dataset.processKind) layer.classList.add(`is-${step.dataset.processKind}`);
+    layer.style.zIndex = index;
+    layer.style.clipPath = index ? 'inset(100% 0 0 0)' : 'inset(0% 0 0 0)';
+    layer.setAttribute('aria-hidden', String(index !== 0));
+    const image = new Image();
+    image.src = step.dataset.processImage;
+    image.alt = step.dataset.processAlt;
+    image.decoding = 'async';
+    layer.append(image);
+    return layer;
+  });
+  processFrame.replaceChildren(...processLayers);
   function activateProcess(index) {
     if (index === processActive) return;
     processActive = index;
@@ -87,25 +100,9 @@
       article.classList.toggle('is-active', i === index);
       if (i === index) article.setAttribute('aria-current', 'step');
       else article.removeAttribute('aria-current');
+      processLayers[i].setAttribute('aria-hidden', String(i !== index));
     });
     processCaption.textContent = step.dataset.processCaption;
-    const generation = ++processGeneration;
-    clearTimeout(processImageTimer);
-    const apply = () => {
-      if (generation !== processGeneration) return;
-      processFrame.classList.toggle('is-plan', step.dataset.processKind === 'plan');
-      processFrame.classList.toggle('is-drawing', step.dataset.processKind === 'drawing');
-      processImage.src = step.dataset.processImage;
-      processImage.alt = step.dataset.processAlt;
-      processImage.style.opacity = '1';
-      processImage.style.transform = 'none';
-    };
-    if (reduced.matches || index === 0 && processImage.getAttribute('src') === step.dataset.processImage) apply();
-    else {
-      processImage.style.opacity = '0';
-      processImage.style.transform = 'translateY(12px)';
-      processImageTimer = setTimeout(apply, 160);
-    }
   }
   function updateProcess() {
     processFrameRequest = 0;
@@ -115,16 +112,25 @@
     const target = innerHeight * (innerWidth <= 600 ? .7 : .49);
     let selected = 0;
     let nearest = Infinity;
-    processSteps.forEach((step, index) => {
-      const rect = step.getBoundingClientRect();
+    const rectangles = processSteps.map(step => step.getBoundingClientRect());
+    rectangles.forEach((rect, index) => {
       const distance = Math.abs(rect.top + rect.height / 2 - target);
       if (distance < nearest) { nearest = distance; selected = index; }
     });
     activateProcess(selected);
+    processLayers.forEach((layer, index) => {
+      const previous = rectangles[Math.max(0, index - 1)];
+      const current = rectangles[index];
+      const boundary = ((previous.top + previous.height / 2) + (current.top + current.height / 2)) / 2;
+      const travel = Math.min(innerHeight * .72, current.height * .85);
+      const reveal = index === 0 ? 1 : reduced.matches ? Number(selected >= index) : clamp((target - boundary) / travel + .5);
+      layer.style.clipPath = `inset(${(1 - reveal) * 100}% 0 0 0)`;
+    });
   }
   function scheduleProcess() { if (!processFrameRequest) processFrameRequest = requestAnimationFrame(updateProcess); }
   window.addEventListener('scroll', scheduleProcess, {passive:true});
   window.addEventListener('resize', scheduleProcess, {passive:true});
+  reduced.addEventListener('change', scheduleProcess);
   activateProcess(0);
   const warmProcess = new IntersectionObserver(entries => {
     if (!entries.some(entry => entry.isIntersecting)) return;
