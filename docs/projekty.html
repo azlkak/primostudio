@@ -10,11 +10,13 @@
   <link rel="icon" href="assets/monogram-cocoa.svg" type="image/svg+xml">
   <script src="theme.js?v=cover-5"></script>
   <link rel="stylesheet" href="styles.css?v=cover-7">
-  <link rel="stylesheet" href="portfolio-v2.css?v=portfolio-2">
+  <link rel="stylesheet" href="portfolio-v2.css?v=portfolio-4">
   <script src="contact.js?v=portfolio-1" defer></script>
-  <script src="portfolio.js?v=portfolio-3" defer></script>
+  <script src="portfolio.js?v=portfolio-4" defer></script>
+  <script src="project-open.js?v=majdan-1" defer></script>
 </head>
 <body class="interior-page">
+  <div id="portfolio-view">
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="interior-header"><a class="brand" href="./" aria-label="Primo Studio — strona główna"><img class="brand-symbol" src="assets/monogram-cocoa.svg" data-day-src="assets/monogram-cocoa.svg" data-night-src="assets/monogram.svg" alt="" width="27" height="55"><span class="brand-name"><img src="assets/wordmark-cocoa.svg" data-day-src="assets/wordmark-cocoa.svg" data-night-src="assets/wordmark.svg" alt="Primo Studio" width="200" height="29"><span class="brand-descriptor">Architektura wnętrz</span></span></a><div class="interior-actions"><div class="theme-control" aria-label="Wygląd strony" hidden>
       <button class="theme-toggle" type="button" role="switch" aria-label="Widok nocny" aria-checked="false" data-theme-toggle>
@@ -36,13 +38,13 @@
           <p class="gallery-description" data-gallery-description>Przegląd projektów Primo Studio.</p>
         </div>
         <div class="gallery-scene">
-          <ol class="project-stack" aria-label="Miejsca na realizacje">
+          <ol class="project-stack" aria-label="Projekty i miejsca na kolejne realizacje">
           <li class="stack-item">
-            <button class="project-card case-1" type="button" data-project="0" aria-label="Pokaż miejsce na realizację 01" aria-pressed="false">
+            <a class="project-card case-1" href="majdan.html" data-project="0" data-open-project="majdan" data-project-title="Majdan" data-project-description="Dom prywatny · Architektura wnętrz" aria-label="Otwórz projekt Majdan" aria-haspopup="dialog">
               <span class="case-topline"><span>Primo Studio</span><span>01</span></span>
-              <span class="case-picture"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg><span>Zdjęcie realizacji</span></span>
-              <span class="case-caption"><span class="case-title">Nazwa projektu</span><span class="case-detail">Typ wnętrza · Lokalizacja</span></span>
-            </button>
+              <span class="case-picture has-project-photo"><img src="assets/majdan-threshold.webp" alt="Jasny hol projektu Majdan z drewnianą konsolą i oliwkowymi siedziskami" width="1024" height="1536"></span>
+              <span class="case-caption"><span class="case-title">Majdan</span><span class="case-detail">Dom prywatny <span aria-hidden="true">↗</span></span></span>
+            </a>
           </li>
           <li class="stack-item">
             <button class="project-card case-2" type="button" data-project="1" aria-label="Pokaż miejsce na realizację 02" aria-pressed="false">
@@ -76,7 +78,7 @@
       <div class="gallery-caption"><span>Przestrzenie tworzone z myślą o Tobie</span><span class="gallery-hint" data-gallery-hint>Przewijaj lub wybierz kadr <span aria-hidden="true">↓</span></span></div>
       <p class="sr-only" role="status" aria-live="polite" data-gallery-status></p>
     </section>
-    <p class="portfolio-draft-note">Portfolio w przygotowaniu — zdjęcia i opisy realizacji pojawią się tutaj wkrótce.</p>
+    <p class="portfolio-draft-note">Portfolio rozwijamy — kolejne realizacje pojawią się tutaj wkrótce.</p>
     <section class="portfolio-contact" aria-labelledby="portfolio-contact-title"><h2 id="portfolio-contact-title">Porozmawiajmy<br>o Twoim wnętrzu</h2><a class="consultation header-cta portfolio-cta" href="kontakt.html" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog"><span>Porozmawiajmy</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg></a></section>
   </main>
   <footer class="site-footer" aria-label="Stopka Primo Studio">
@@ -95,6 +97,7 @@
     </div>
     <div class="footer-bottom"><span>© Primo Studio</span></div>
   </footer>
+  </div>
   <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-description">
     <button class="dialog-close" type="button" aria-label="Zamknij panel kontaktu" autofocus><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
     <p class="eyebrow">Zacznijmy od rozmowy</p>

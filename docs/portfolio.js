@@ -35,13 +35,15 @@
       item.style.setProperty('--case-angle', selected ? '0deg' : compact ? '-54deg' : '-62deg');
       item.style.setProperty('--case-scale', selected ? compact ? '.83' : '.88' : String(Math.max(.76, .96 - Math.abs(active < 0 ? index - 1.5 : distance) * .04)));
       item.style.setProperty('--case-order', selected ? '20' : String(index + 1));
-      cards[index].setAttribute('aria-pressed', String(selected));
+      cards[index].classList.toggle('is-selected', selected);
+      if (cards[index].tagName === 'BUTTON') cards[index].setAttribute('aria-pressed', String(selected));
       indexes[index].setAttribute('aria-pressed', String(selected));
     });
     position.textContent = active < 0 ? 'Przegląd realizacji' : `Kadr ${String(active + 1).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
-    title.textContent = active < 0 ? 'Wybierz swój kadr' : 'Nazwa projektu';
-    description.textContent = active < 0 ? reducedMotion.matches ? 'Wybierz kadr z galerii.' : compact ? 'Dotknij karty lub wybierz numer poniżej.' : 'Najedź na kartę lub wybierz ją, aby przyjrzeć się projektowi.' : 'Typ wnętrza · Lokalizacja';
+    title.textContent = active < 0 ? 'Wybierz swój kadr' : cards[active].dataset.projectTitle || 'Nazwa projektu';
+    description.textContent = active < 0 ? reducedMotion.matches ? 'Wybierz kadr z galerii.' : compact ? 'Dotknij karty lub wybierz numer poniżej.' : 'Najedź na kartę lub wybierz ją, aby przyjrzeć się projektowi.' : cards[active].dataset.projectDescription || 'Typ wnętrza · Lokalizacja';
     hint.textContent = reducedMotion.matches ? 'Wybierz kadr' : compact ? 'Przesuń w bok lub wybierz kadr ↔' : 'Przewijaj lub wybierz kadr ↓';
+    if (active === 0) hint.textContent = 'Kliknij, aby wejść do projektu ↗';
     if (announce) status.textContent = active < 0 ? 'Przegląd wszystkich kadrów.' : `Wybrano miejsce na realizację ${active + 1} z ${cards.length}.`;
   }
 
@@ -64,9 +66,10 @@
       }
     });
     card.addEventListener('focus', () => select(index, false));
-    card.addEventListener('click', () => select(active === index && pinned ? -1 : index));
+    card.addEventListener('click', () => select(card.hasAttribute('data-open-project') ? index : active === index && pinned ? -1 : index));
   });
   scene.addEventListener('pointerleave', () => {
+    if (document.body.classList.contains('project-is-open')) return;
     if (!pinned && !scene.contains(document.activeElement)) select(-1, false, false);
   });
   indexes.forEach((button, index) => button.addEventListener('click', () => select(index)));
