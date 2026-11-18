@@ -31,9 +31,9 @@
       const selected = index === active;
       const y = active < 0 ? (index - (items.length - 1) / 2) * step : selected ? 0 : Math.sign(distance) * (selectedGap + (Math.abs(distance) - 1) * step * .72);
       item.style.setProperty('--case-y', `${y}px`);
-      item.style.setProperty('--case-z', `${selected ? 40 : -Math.abs(active < 0 ? index - 1.5 : distance) * 40}px`);
+      item.style.setProperty('--case-z', `${selected ? 200 : -Math.abs(active < 0 ? index - 1.5 : distance) * 40}px`);
       item.style.setProperty('--case-angle', selected ? '0deg' : compact ? '-54deg' : '-62deg');
-      item.style.setProperty('--case-scale', selected ? '1' : String(Math.max(.76, .96 - Math.abs(active < 0 ? index - 1.5 : distance) * .04)));
+      item.style.setProperty('--case-scale', selected ? compact ? '.83' : '.88' : String(Math.max(.76, .96 - Math.abs(active < 0 ? index - 1.5 : distance) * .04)));
       item.style.setProperty('--case-order', selected ? '20' : String(index + 1));
       cards[index].setAttribute('aria-pressed', String(selected));
       indexes[index].setAttribute('aria-pressed', String(selected));
