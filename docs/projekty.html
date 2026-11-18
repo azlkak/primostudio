@@ -10,8 +10,9 @@
   <link rel="icon" href="assets/monogram-cocoa.svg" type="image/svg+xml">
   <script src="theme.js?v=cover-5"></script>
   <link rel="stylesheet" href="styles.css?v=cover-7">
-  <link rel="stylesheet" href="portfolio-v1.css?v=portfolio-1">
+  <link rel="stylesheet" href="portfolio-v2.css?v=portfolio-2">
   <script src="contact.js?v=portfolio-1" defer></script>
+  <script src="portfolio.js?v=portfolio-2" defer></script>
 </head>
 <body class="interior-page">
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -25,43 +26,58 @@
     <nav class="breadcrumbs" aria-label="Ścieżka nawigacji"><ol><li><a href="./">Strona główna</a></li><li><span aria-hidden="true">/</span><span aria-current="page">Nasze projekty</span></li></ol></nav>
     <div class="portfolio-intro">
       <div><p class="eyebrow">Wybrane realizacje</p><h1>Nasze projekty</h1></div>
-      <p class="portfolio-lead">Wnętrza prywatne i komercyjne.<br>Poznaj przestrzenie, które tworzymy.</p>
+      <p class="portfolio-lead">Wnętrza prywatne i komercyjne.<br>Każdy projekt to inna historia.</p>
     </div>
-    <section class="project-grid" aria-label="Galeria projektów — miejsca na realizacje">
-      <article class="project-card">
-        <div class="project-placeholder shape-soft" role="img" aria-label="Miejsce na zdjęcie pierwszej realizacji">
-          <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg>
-          <span>Zdjęcie realizacji</span>
+    <section class="project-gallery" aria-label="Przegląd realizacji" data-gallery>
+      <div class="gallery-layout">
+        <div class="gallery-meta">
+          <p class="gallery-kicker" data-gallery-position>Przegląd realizacji</p>
+          <h2 data-gallery-title>Wybrane realizacje</h2>
+          <p class="gallery-description" data-gallery-description>Przegląd projektów Primo Studio.</p>
         </div>
-        <div class="project-caption"><div><h2>Nazwa projektu</h2><p>Typ wnętrza · Lokalizacja</p></div><svg class="project-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></div>
-      </article>
-      <article class="project-card">
-        <div class="project-placeholder shape-arch-corner" role="img" aria-label="Miejsce na zdjęcie drugiej realizacji">
-          <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg>
-          <span>Zdjęcie realizacji</span>
+        <div class="gallery-scene">
+          <ol class="project-stack" aria-label="Miejsca na realizacje">
+          <li class="stack-item">
+            <button class="project-card case-1" type="button" data-project="0" aria-label="Pokaż miejsce na realizację 01" aria-pressed="false">
+              <span class="case-topline"><span>Primo Studio</span><span>01</span></span>
+              <span class="case-picture"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg><span>Zdjęcie realizacji</span></span>
+              <span class="case-caption"><span class="case-title">Nazwa projektu</span><span class="case-detail">Typ wnętrza · Lokalizacja</span></span>
+            </button>
+          </li>
+          <li class="stack-item">
+            <button class="project-card case-2" type="button" data-project="1" aria-label="Pokaż miejsce na realizację 02" aria-pressed="false">
+              <span class="case-topline"><span>Primo Studio</span><span>02</span></span>
+              <span class="case-picture"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg><span>Zdjęcie realizacji</span></span>
+              <span class="case-caption"><span class="case-title">Nazwa projektu</span><span class="case-detail">Typ wnętrza · Lokalizacja</span></span>
+            </button>
+          </li>
+          <li class="stack-item">
+            <button class="project-card case-3" type="button" data-project="2" aria-label="Pokaż miejsce na realizację 03" aria-pressed="false">
+              <span class="case-topline"><span>Primo Studio</span><span>03</span></span>
+              <span class="case-picture"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg><span>Zdjęcie realizacji</span></span>
+              <span class="case-caption"><span class="case-title">Nazwa projektu</span><span class="case-detail">Typ wnętrza · Lokalizacja</span></span>
+            </button>
+          </li>
+          <li class="stack-item">
+            <button class="project-card case-4" type="button" data-project="3" aria-label="Pokaż miejsce na realizację 04" aria-pressed="false">
+              <span class="case-topline"><span>Primo Studio</span><span>04</span></span>
+              <span class="case-picture"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg><span>Zdjęcie realizacji</span></span>
+              <span class="case-caption"><span class="case-title">Nazwa projektu</span><span class="case-detail">Typ wnętrza · Lokalizacja</span></span>
+            </button>
+          </li>
+          </ol>
         </div>
-        <div class="project-caption"><div><h2>Nazwa projektu</h2><p>Typ wnętrza · Lokalizacja</p></div><svg class="project-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></div>
-      </article>
-      <article class="project-card">
-        <div class="project-placeholder shape-curve-base" role="img" aria-label="Miejsce na zdjęcie trzeciej realizacji">
-          <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg>
-          <span>Zdjęcie realizacji</span>
-        </div>
-        <div class="project-caption"><div><h2>Nazwa projektu</h2><p>Typ wnętrza · Lokalizacja</p></div><svg class="project-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></div>
-      </article>
-      <article class="project-card">
-        <div class="project-placeholder shape-diagonal" role="img" aria-label="Miejsce na zdjęcie czwartej realizacji">
-          <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5"/><circle cx="18" cy="19" r="3"/><path d="m8 33 11-10 8 7 7-7 7 9"/></svg>
-          <span>Zdjęcie realizacji</span>
-        </div>
-        <div class="project-caption"><div><h2>Nazwa projektu</h2><p>Typ wnętrza · Lokalizacja</p></div><svg class="project-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></div>
-      </article>
+        <nav class="gallery-controls" aria-label="Wybierz kadr">
+          <div class="gallery-arrows"><button class="gallery-arrow" type="button" data-gallery-prev aria-label="Poprzedni kadr"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m7 14 5-5 5 5"/></svg></button><button class="gallery-arrow" type="button" data-gallery-next aria-label="Następny kadr"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button></div>
+          <div class="gallery-dots"><button type="button" data-gallery-index="0" aria-label="Wybierz kadr 01" aria-pressed="false">01</button><button type="button" data-gallery-index="1" aria-label="Wybierz kadr 02" aria-pressed="false">02</button><button type="button" data-gallery-index="2" aria-label="Wybierz kadr 03" aria-pressed="false">03</button><button type="button" data-gallery-index="3" aria-label="Wybierz kadr 04" aria-pressed="false">04</button></div>
+          <button class="gallery-reset" type="button" data-gallery-reset>Wszystkie<br>kadry</button>
+        </nav>
+      </div>
+      <div class="gallery-caption"><span>Przestrzenie tworzone z myślą o Tobie</span><span class="gallery-hint" data-gallery-hint>Przewijaj lub wybierz kadr <span aria-hidden="true">↓</span></span></div>
+      <p class="sr-only" role="status" aria-live="polite" data-gallery-status></p>
     </section>
     <p class="portfolio-draft-note">Portfolio w przygotowaniu — zdjęcia i opisy realizacji pojawią się tutaj wkrótce.</p>
-    <section class="portfolio-contact" aria-labelledby="portfolio-contact-title">
-      <h2 id="portfolio-contact-title">Porozmawiajmy<br>o Twoim wnętrzu</h2>
-      <a class="consultation header-cta portfolio-cta" href="kontakt.html" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog"><span>Porozmawiajmy</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg></a>
-    </section>
+    <section class="portfolio-contact" aria-labelledby="portfolio-contact-title"><h2 id="portfolio-contact-title">Porozmawiajmy<br>o Twoim wnętrzu</h2><a class="consultation header-cta portfolio-cta" href="kontakt.html" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog"><span>Porozmawiajmy</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg></a></section>
   </main>
   <footer class="site-footer" aria-label="Stopka Primo Studio">
     <div class="footer-inner">
