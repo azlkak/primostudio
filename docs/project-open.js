@@ -53,7 +53,7 @@
       }, {once:true});
       frame.addEventListener('error', () => { clearTimeout(timeout); resolve(false); }, {once:true});
     });
-    frame.src = new URL('majdan.html?v=majdan-1', location.href).href;
+    frame.src = new URL('majdan.html?v=majdan-2', location.href).href;
     view.append(frame);
     document.body.append(view);
     document.body.classList.add('project-is-open');
