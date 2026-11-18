@@ -2,11 +2,9 @@
   const chapters = document.getElementById('chapters');
   const photos = [...document.querySelectorAll('[data-photo]')];
   const captions = [...document.querySelectorAll('[data-caption]')];
-  const chapterButtons = [...document.querySelectorAll('[data-goto]')];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const counter = document.getElementById('chapter-counter');
   const hint = document.getElementById('scroll-hint');
-  let activeChapter = 0;
+  let activeChapter = -1;
   let isOpen = true;
   let frame = 0;
   const clamp = (v, min = 0, max = 1) => Math.min(max, Math.max(min, v));
@@ -32,12 +30,9 @@
       caption.style.transform = reduced.matches ? 'none' : `translateY(${(1 - incoming) * 32 - (1 - outgoing) * 22}px)`;
       caption.setAttribute('aria-hidden', String(next !== i));
     });
-    if (activeChapter !== next || !counter.dataset.ready) {
+    if (activeChapter !== next) {
       activeChapter = next;
-      counter.dataset.ready = 'true';
-      counter.textContent = `0${next + 1} — 04`;
       hint.innerHTML = next === 3 ? 'ZOBACZ, JAK POWSTAŁO WNĘTRZE <span aria-hidden="true">↓</span>' : 'PRZEWIŃ, ABY WEJŚĆ DALEJ <span aria-hidden="true">↓</span>';
-      chapterButtons.forEach((b, i) => { if (i === next) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
     }
   }
   function schedule() { if (!frame) frame = requestAnimationFrame(updateChapters); }
@@ -58,10 +53,6 @@
   });
   window.addEventListener('scroll', schedule, {passive:true});
   window.addEventListener('resize', schedule, {passive:true});
-  chapterButtons.forEach(button=>button.addEventListener('click',()=>{
-    const top=chapters.getBoundingClientRect().top+scrollY+Number(button.dataset.goto)*innerHeight;
-    window.scrollTo({top,behavior:reduced.matches?'auto':'smooth'});
-  }));
   document.querySelector('.stage-bottom a').addEventListener('click',event=>{
     event.preventDefault();
     document.getElementById('making').scrollIntoView({behavior:reduced.matches?'auto':'smooth'});
@@ -71,7 +62,6 @@
   // Every description remains in the document. Native scrolling chooses the image.
   const processSteps = [...document.querySelectorAll('[data-process-step]')];
   const processFrame = document.querySelector('.process-image-frame');
-  const processCaption = document.getElementById('step-caption');
   const processRoot = document.querySelector('.process-layout');
   let processActive = -1;
   let processFrameRequest = 0;
@@ -95,14 +85,12 @@
   function activateProcess(index) {
     if (index === processActive) return;
     processActive = index;
-    const step = processSteps[index];
     processSteps.forEach((article, i) => {
       article.classList.toggle('is-active', i === index);
       if (i === index) article.setAttribute('aria-current', 'step');
       else article.removeAttribute('aria-current');
       processLayers[i].setAttribute('aria-hidden', String(i !== index));
     });
-    processCaption.textContent = step.dataset.processCaption;
   }
   function updateProcess() {
     processFrameRequest = 0;
