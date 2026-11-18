@@ -7,3 +7,5 @@ Wersja Primo zachowuje ciepłe kremy i kakao, DM Sans, oryginalne logo, dzień/n
 Interakcje: wskazanie kursorem, wybór karty, strzałki i indeks, klawiatura, ograniczone przewijanie w obrębie galerii (strona przewija się normalnie na krańcach), poziomy gest na telefonie. Tryb ograniczonego ruchu i brak JS zapewniają płaską czytelną galerię. Projekt pozostaje dostępny także bez animacji.
 
 Pliki publikacji: `docs/projekty.html`, `docs/portfolio-v2.css`, `docs/portfolio.js`. Poprzedni wariant: `projekty-v1.html` i zachowany `docs/portfolio-v1.css`.
+
+Wybrana karta ma większe wysunięcie w osi Z z kompensacją skali, aby pozostałe karty nie mogły zasłaniać podpisu, także na dużych ekranach.
