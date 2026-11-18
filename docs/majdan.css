@@ -67,10 +67,11 @@
 .process-image-frame.is-drawing{background:#fff;padding:15px}
 .process-image-frame.is-drawing img{object-fit:contain}
 
-.closing{padding:65px var(--gutter);background:var(--paper);display:grid;grid-template-columns:auto 1fr auto;gap:50px;align-items:center;border-top:1px solid var(--line)}
-.closing-symbol{width:48px;height:auto;justify-self:center}
-.closing .eyebrow{margin-bottom:18px}
-.closing h2{font-size:clamp(40px,5vw,72px)}
+.closing{padding:65px var(--gutter);background:var(--paper);display:grid;grid-template-columns:auto 1fr auto;column-gap:50px;row-gap:18px;align-items:center;border-top:1px solid var(--line)}
+.closing-symbol{grid-column:1;grid-row:2;width:48px;height:auto;justify-self:center}
+.closing>.eyebrow{grid-column:2;grid-row:1;margin:0}
+.closing h2{grid-column:2;grid-row:2;font-size:clamp(40px,5vw,72px)}
+.closing .talk{grid-column:3;grid-row:2}
 .talk{border:0;border-radius:50px;background:var(--ink);color:var(--paper);padding:17px 28px;min-height:50px;font-size:14px}
 .story-footer{display:flex;align-items:center;justify-content:space-between;gap:25px;margin:0 var(--gutter);padding:35px 0;border-top:1px solid var(--line);font-size:12px}
 .story-footer>img{width:170px}
@@ -85,7 +86,7 @@
 .process-words{font-size:30px}
 .making-intro>div{gap:40px}
 .process-image-frame{height:420px}
-.closing{gap:25px}
+.closing{column-gap:25px}
 .closing-symbol{width:40px}
 .talk{font-size:12px;padding:15px 20px}}
 @media(max-width:600px){.stage-header{padding:15px var(--gutter);grid-template-columns:1fr auto}
@@ -122,11 +123,11 @@
 .process-detail .eyebrow{font-size:9px}
 .process-detail>p:last-child{font-size:14px}
 .process-controls{order:3;margin-top:-10px}
-.closing{grid-template-columns:38px 1fr;gap:25px 20px;padding:42px var(--gutter)}
+.closing{grid-template-columns:38px 1fr;gap:12px 20px;padding:42px var(--gutter)}
 .closing-symbol{width:30px}
 .closing h2{font-size:39px}
-.closing .eyebrow{font-size:8px;margin-bottom:12px}
-.closing .talk{grid-column:2;justify-self:start}
+.closing>.eyebrow{font-size:8px;margin:0}
+.closing .talk{grid-column:2;grid-row:3;justify-self:start;margin-top:13px}
 .story-footer{display:grid;grid-template-columns:1fr auto;gap:20px;font-size:10px;padding:28px 0}
 .story-footer>img{width:140px}
 .story-footer>a{grid-column:1/-1}}
