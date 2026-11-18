@@ -11,3 +11,7 @@ Następnie pojawia się siedem ciągłych opisów procesu. Nie ma listy nazw, za
 Referencje użytkownika: https://pl.pinterest.com/pin/1107181889672451986/ oraz https://pl.pinterest.com/pin/1107181889672491318/. Pinterest częściowo zasłania filmy panelem logowania. Opieramy się także na opisanym przez użytkownika zachowaniu i dostarczonych zrzutach; nie kopiujemy tekstów ani identyfikacji Telha Clarke.
 
 Publikacja: `docs/projekty.html`, `portfolio.js`, `portfolio-v2.css`, `project-open.js`, `majdan.html`, `majdan.css`, `majdan.js` i dziesięć plików `docs/assets/majdan-*.webp`. Oryginalny lokalny prototyp pozostaje w `design/majdan-motion-v2/`.
+
+Aktualizacja płynności: powiększana kopia zdjęcia zostaje na ekranie do załadowania, zdekodowania i namalowania docelowej sceny oraz fontów. Znika dopiero po łagodnym przekazaniu obrazu; tekst i przyciemnienie pojawiają się osobno. Usunięto przejście przez przezroczystą ramkę.
+
+Animacja procesu odpowiada ruchowi zaobserwowanemu bezpośrednio na https://telhaclarke.com.au/studio/ w sekcji Our vision: następny kadr odsłania się od dołu nad poprzednim, proporcjonalnie do przewijania, także przy cofaniu. Nie stosujemy zanikania i wymiany adresu pojedynczego obrazka. Zdjęcie zajmuje około 66% szerokości sekcji (kolumna tekstu około 34%, poza odstępem) oraz 85% wysokości ekranu. Na telefonie pozostaje nad opisem i jest wyższe niż poprzednio. Tryb ograniczonego ruchu zmienia kadry skokowo.
