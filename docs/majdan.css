@@ -165,3 +165,35 @@
 @media(max-width:600px){.process-layout{display:block;margin-top:32px}.process-image{position:sticky;top:0;padding:10px 0 12px;z-index:3;background:var(--paper)}.process-image-frame{height:43svh;min-height:260px;max-height:440px}.process-flow{position:relative;z-index:1}.process-step{min-height:62svh;padding:28px 0 65px;gap:18px;justify-content:flex-start}.process-step h3{font-size:32px;line-height:1.08}.process-step>p:last-child{font-size:13px;line-height:1.7}.process-step>.eyebrow{font-size:9px}.process-photo-layer.is-plan,.process-photo-layer.is-drawing{padding:12px}}
 @media(max-width:360px){.process-step h3{font-size:29px}.process-image-frame{min-height:240px}}
 @media(prefers-reduced-motion:reduce){.process-step h3{transform:none!important;transition:none}.process-photo-layer{will-change:auto}.process-image-frame img{transition:none;transform:none!important}}
+/* An editorial gallery lets the finished details stand on their own. */
+.detail-gallery{background:var(--paper);padding:0 var(--gutter) 90px}
+.detail-gallery-header,.detail-gallery-grid{max-width:1456px;margin:auto}
+.detail-gallery-header{padding:0 0 42px}
+.detail-gallery-header .eyebrow{margin-bottom:20px}
+.detail-gallery-header h2{font-size:clamp(48px,5.8vw,84px)}
+.detail-gallery-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:clamp(20px,3.4vw,64px);row-gap:60px;align-items:start}
+.detail-shot{min-width:0;grid-column:span 2}
+.detail-shot-frame{overflow:hidden;background:var(--process-media);aspect-ratio:2/3}
+.detail-shot-frame img{width:100%;height:100%;object-fit:cover}
+.detail-shot figcaption{font-size:12px;line-height:1.5;color:var(--muted);padding-top:14px}
+.detail-shot--green-glaze,.detail-shot--wood,.detail-shot--storage{grid-column:span 4}
+.detail-shot--green-glaze .detail-shot-frame{aspect-ratio:4/5}
+.detail-shot--warm-glaze{padding-top:90px}
+.detail-shot--handles{padding-top:30px}
+.detail-shot--wood .detail-shot-frame,.detail-shot--storage .detail-shot-frame{aspect-ratio:4/3}
+.detail-shot--light{padding-top:60px}
+@media(max-width:600px){
+.detail-gallery{padding-bottom:55px}
+.detail-gallery-header{padding-bottom:28px}
+.detail-gallery-header .eyebrow{font-size:9px;margin-bottom:16px}
+.detail-gallery-header h2{font-size:48px}
+.detail-gallery-grid{display:block}
+.detail-shot{padding-top:0;margin-bottom:32px}
+.detail-shot:last-child{margin-bottom:0}
+.detail-shot-frame,.detail-shot--green-glaze .detail-shot-frame{aspect-ratio:4/5}
+.detail-shot--wood .detail-shot-frame,.detail-shot--storage .detail-shot-frame{aspect-ratio:4/3}
+.detail-shot figcaption{font-size:11px;padding-top:10px}
+}
+.detail-shot--green-glaze img{transform:scale(1.25);transform-origin:38% 43%}
+.detail-shot--handles img{transform:scale(1.5);transform-origin:75% 65%}
+.detail-shot--light img{transform:scale(1.35);transform-origin:60% 38%}
