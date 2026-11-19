@@ -32,7 +32,7 @@
     });
     if (activeChapter !== next) {
       activeChapter = next;
-      hint.innerHTML = next === 3 ? 'ZOBACZ, JAK POWSTAŁO WNĘTRZE <span aria-hidden="true">↓</span>' : 'PRZEWIŃ, ABY WEJŚĆ DALEJ <span aria-hidden="true">↓</span>';
+      hint.innerHTML = next === 3 ? 'PRZYJRZYJ SIĘ DETALOM <span aria-hidden="true">↓</span>' : 'PRZEWIŃ, ABY WEJŚĆ DALEJ <span aria-hidden="true">↓</span>';
     }
   }
   function schedule() { if (!frame) frame = requestAnimationFrame(updateChapters); }
@@ -55,58 +55,56 @@
   window.addEventListener('resize', schedule, {passive:true});
   document.querySelector('.stage-bottom a').addEventListener('click',event=>{
     event.preventDefault();
-    document.getElementById('making').scrollIntoView({behavior:reduced.matches?'auto':'smooth'});
+    document.getElementById('details').scrollIntoView({behavior:reduced.matches?'auto':'smooth'});
   });
   reduced.addEventListener('change',schedule);
   updateChapters();
-  // Every description remains in the document. Native scrolling chooses the image.
-  const processSteps = [...document.querySelectorAll('[data-process-step]')];
-  const processFrame = document.querySelector('.process-image-frame');
-  const processRoot = document.querySelector('.process-layout');
-  let processActive = -1;
-  let processFrameRequest = 0;
-  processFrame.classList.remove('is-plan', 'is-drawing');
-  const processLayers = processSteps.map((step, index) => {
+  // Concept paragraphs stay readable in the document; native scrolling reveals each detail.
+  const conceptParts = [...document.querySelectorAll('[data-concept-part]')];
+  const detailFrame = document.querySelector('.process-image-frame');
+  const detailRoot = document.querySelector('.process-layout');
+  let detailActive = -1;
+  let detailFrameRequest = 0;
+  const detailLayers = conceptParts.map((step, index) => {
     const layer = document.createElement('div');
     layer.className = 'process-photo-layer';
-    layer.dataset.processPhoto = index;
-    if (step.dataset.processKind) layer.classList.add(`is-${step.dataset.processKind}`);
+    layer.dataset.conceptPhoto = index;
     layer.style.zIndex = index;
     layer.style.clipPath = index ? 'inset(100% 0 0 0)' : 'inset(0% 0 0 0)';
     layer.setAttribute('aria-hidden', String(index !== 0));
     const image = new Image();
-    image.src = step.dataset.processImage;
-    image.alt = step.dataset.processAlt;
+    image.src = step.dataset.conceptImage;
+    image.alt = step.dataset.conceptAlt;
     image.decoding = 'async';
     layer.append(image);
     return layer;
   });
-  processFrame.replaceChildren(...processLayers);
-  function activateProcess(index) {
-    if (index === processActive) return;
-    processActive = index;
-    processSteps.forEach((article, i) => {
+  detailFrame.replaceChildren(...detailLayers);
+  function activateDetail(index) {
+    if (index === detailActive) return;
+    detailActive = index;
+    conceptParts.forEach((article, i) => {
       article.classList.toggle('is-active', i === index);
-      if (i === index) article.setAttribute('aria-current', 'step');
+      if (i === index) article.setAttribute('aria-current', 'true');
       else article.removeAttribute('aria-current');
-      processLayers[i].setAttribute('aria-hidden', String(i !== index));
+      detailLayers[i].setAttribute('aria-hidden', String(i !== index));
     });
   }
-  function updateProcess() {
-    processFrameRequest = 0;
+  function updateDetails() {
+    detailFrameRequest = 0;
     if (document.querySelector('.project-story')?.hidden) return;
-    const bounds = processRoot.getBoundingClientRect();
+    const bounds = detailRoot.getBoundingClientRect();
     if (bounds.top > innerHeight || bounds.bottom < 0) return;
     const target = innerHeight * (innerWidth <= 600 ? .7 : .49);
     let selected = 0;
     let nearest = Infinity;
-    const rectangles = processSteps.map(step => step.getBoundingClientRect());
+    const rectangles = conceptParts.map(step => step.getBoundingClientRect());
     rectangles.forEach((rect, index) => {
       const distance = Math.abs(rect.top + rect.height / 2 - target);
       if (distance < nearest) { nearest = distance; selected = index; }
     });
-    activateProcess(selected);
-    processLayers.forEach((layer, index) => {
+    activateDetail(selected);
+    detailLayers.forEach((layer, index) => {
       const previous = rectangles[Math.max(0, index - 1)];
       const current = rectangles[index];
       const boundary = ((previous.top + previous.height / 2) + (current.top + current.height / 2)) / 2;
@@ -115,16 +113,16 @@
       layer.style.clipPath = `inset(${(1 - reveal) * 100}% 0 0 0)`;
     });
   }
-  function scheduleProcess() { if (!processFrameRequest) processFrameRequest = requestAnimationFrame(updateProcess); }
-  window.addEventListener('scroll', scheduleProcess, {passive:true});
-  window.addEventListener('resize', scheduleProcess, {passive:true});
-  reduced.addEventListener('change', scheduleProcess);
-  activateProcess(0);
-  const warmProcess = new IntersectionObserver(entries => {
+  function scheduleDetails() { if (!detailFrameRequest) detailFrameRequest = requestAnimationFrame(updateDetails); }
+  window.addEventListener('scroll', scheduleDetails, {passive:true});
+  window.addEventListener('resize', scheduleDetails, {passive:true});
+  reduced.addEventListener('change', scheduleDetails);
+  activateDetail(0);
+  const warmDetails = new IntersectionObserver(entries => {
     if (!entries.some(entry => entry.isIntersecting)) return;
-    processSteps.forEach(step => { const img = new Image(); img.src = step.dataset.processImage; });
-    warmProcess.disconnect();
+    conceptParts.forEach(step => { const img = new Image(); img.src = step.dataset.conceptImage; });
+    warmDetails.disconnect();
   }, {rootMargin:'100% 0px'});
-  warmProcess.observe(processRoot);
+  warmDetails.observe(detailRoot);
 
 })();

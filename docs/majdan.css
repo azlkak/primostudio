@@ -143,7 +143,7 @@
 .process-image-frame{height:345px}}
 @media(prefers-reduced-motion:reduce){.project-story *,.project-story *::before,.project-story *::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 .chapter-photo,.chapter-caption{will-change:auto}}
-/* The text is a continuous story, with no tabs or next/previous controls. */
+/* Concept notes and detail photographs form a continuous, scroll-led story. */
 .process-layout{position:relative;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.65fr);gap:4vw;align-items:start;margin-top:35px}
 .process-flow{grid-column:1;grid-row:1;min-width:0}
 .process-step{min-height:82svh;display:flex;flex-direction:column;justify-content:center;gap:20px;padding:50px 0}
