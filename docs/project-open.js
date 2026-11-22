@@ -43,7 +43,7 @@
     view.setAttribute('aria-modal', 'true');
     view.setAttribute('aria-label', 'Projekt Majdan');
     frame = document.createElement('iframe');
-    frame.title = 'Majdan — projekt wnętrza w detalach';
+    frame.title = 'Majdan — historia wnętrza';
     frame.className = 'project-frame';
     const loaded = new Promise(resolve => {
       const timeout = setTimeout(() => resolve(false), 12000);
@@ -67,7 +67,7 @@
       }, {once:true});
       frame.addEventListener('error', () => { clearTimeout(timeout); resolve(false); }, {once:true});
     });
-    frame.src = new URL('majdan.html?v=majdan-12', location.href).href;
+    frame.src = new URL('majdan.html?v=majdan-13', location.href).href;
     view.append(frame);
     document.body.append(view);
     document.body.classList.add('project-is-open');
@@ -111,7 +111,7 @@
       frame.contentDocument.documentElement.style.overflow = '';
       ownsHistoryEntry = location.hash !== '#majdan';
       if (ownsHistoryEntry) history.pushState({primoProject:'majdan'}, '', '#majdan');
-      document.title = 'Majdan — projekt wnętrza w detalach | Primo Studio';
+      document.title = 'Majdan — historia wnętrza | Primo Studio';
       frame.contentWindow.focus();
       if (keyboard) frame.contentDocument.getElementById('close-project')?.focus({preventScroll:true});
     } catch (_) {
