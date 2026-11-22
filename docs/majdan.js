@@ -32,7 +32,7 @@
     });
     if (activeChapter !== next) {
       activeChapter = next;
-      hint.innerHTML = next === 3 ? 'PRZYJRZYJ SIĘ DETALOM <span aria-hidden="true">↓</span>' : 'PRZEWIŃ, ABY WEJŚĆ DALEJ <span aria-hidden="true">↓</span>';
+      hint.innerHTML = next === 3 ? 'PRZYJRZYJ SIĘ DETALOM <span aria-hidden="true">↓</span>' : 'PRZEWIŃ, ABY WEJŚĆ GŁĘBIEJ <span aria-hidden="true">↓</span>';
     }
   }
   function schedule() { if (!frame) frame = requestAnimationFrame(updateChapters); }

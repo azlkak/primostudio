@@ -99,6 +99,10 @@ a:hover .arrow { transform: translateX(4px); }
 .contact-options a { display: flex; justify-content: space-between; gap: 8px; padding: 14px 12px; border: 1px solid rgb(55 32 23 / 20%); font-size: 14px; transition: background .2s; }
 .contact-options a[href]:hover { background: rgb(55 32 23 / 6%); }
 .contact-options small { display: block; font-size: 10px; margin-top: 6px; overflow-wrap: anywhere; }
+/* Hidden until an e-mail address is set in contact.js. */
+.contact-options a[hidden], .contact-form[hidden] { display: none; }
+.contact-options:has(> a[hidden]) { grid-template-columns: 1fr 1fr; }
+.contact-dialog:has(.contact-form[hidden]) .contact-options { padding-bottom: 0; border-bottom: 0; }
 .contact-form h3 { font-size: 17px; font-weight: 500; margin: 25px 0 20px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .contact-form label { display: block; font-size: 12px; font-weight: 500; margin-bottom: 16px; }
@@ -113,7 +117,7 @@ button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 @media (max-width: 760px) {
   .header-cta .arrow { width: 18px; height: 18px; flex-basis: 18px; }
   .contact-dialog { padding: 30px 22px; max-height: calc(100svh - 24px); }
-  .contact-options { grid-template-columns: 1fr; gap: 8px; padding-bottom: 20px; }
+  .contact-options, .contact-options:has(> a[hidden]) { grid-template-columns: 1fr; gap: 8px; padding-bottom: 20px; }
   .contact-options a { padding: 11px 12px; }
   .contact-options a > span:first-child { display: flex; align-items: center; gap: 12px; }
   .contact-options small { margin: 0; font-size: 11px; }

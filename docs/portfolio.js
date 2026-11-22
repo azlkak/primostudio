@@ -39,12 +39,12 @@
       if (cards[index].tagName === 'BUTTON') cards[index].setAttribute('aria-pressed', String(selected));
       indexes[index].setAttribute('aria-pressed', String(selected));
     });
-    position.textContent = active < 0 ? 'Przegląd realizacji' : `Kadr ${String(active + 1).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
-    title.textContent = active < 0 ? 'Wybierz swój kadr' : cards[active].dataset.projectTitle || 'Nazwa projektu';
-    description.textContent = active < 0 ? reducedMotion.matches ? 'Wybierz kadr z galerii.' : compact ? 'Dotknij karty lub wybierz numer poniżej.' : 'Najedź na kartę lub wybierz ją, aby przyjrzeć się projektowi.' : cards[active].dataset.projectDescription || 'Typ wnętrza · Lokalizacja';
-    hint.textContent = reducedMotion.matches ? 'Wybierz kadr' : compact ? 'Przesuń w bok lub wybierz kadr ↔' : 'Przewijaj lub wybierz kadr ↓';
+    position.textContent = active < 0 ? 'Przegląd realizacji' : `Projekt ${String(active + 1).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
+    title.textContent = active < 0 ? 'Wybierz projekt' : cards[active].dataset.projectTitle || 'Kolejna realizacja';
+    description.textContent = active < 0 ? reducedMotion.matches ? 'Wybierz projekt z galerii.' : compact ? 'Dotknij karty lub wybierz numer poniżej.' : 'Najedź na kartę lub wybierz ją, aby przyjrzeć się projektowi.' : cards[active].dataset.projectDescription || 'W przygotowaniu — pokażemy ją wkrótce.';
+    hint.textContent = reducedMotion.matches ? 'Wybierz projekt' : compact ? 'Przesuń w bok lub wybierz projekt ↔' : 'Przewiń lub wybierz projekt ↓';
     if (active === 0) hint.textContent = 'Kliknij, aby wejść do projektu ↗';
-    if (announce) status.textContent = active < 0 ? 'Przegląd wszystkich kadrów.' : `Wybrano miejsce na realizację ${active + 1} z ${cards.length}.`;
+    if (announce) status.textContent = active < 0 ? 'Przegląd wszystkich projektów.' : `Wybrano: ${cards[active].dataset.projectTitle || 'kolejna realizacja, w przygotowaniu'}.`;
   }
 
   function select(index, pin = true, announce = true) {

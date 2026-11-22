@@ -8,9 +8,9 @@
   <meta name="theme-color" content="#f2e7d8">
   <link rel="icon" href="assets/monogram-cocoa.svg" type="image/svg+xml">
   <script src="theme.js?v=cover-5"></script>
-  <link rel="stylesheet" href="styles.css?v=cover-5">
+  <link rel="stylesheet" href="styles.css?v=cover-8">
   <link rel="stylesheet" href="process-v3.css?v=process-11">
-  <script src="contact.js?v=process-4" defer></script>
+  <script src="contact.js?v=process-5" defer></script>
 </head>
 <body class="interior-page">
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -96,15 +96,15 @@
   <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-description">
     <button class="dialog-close" type="button" aria-label="Zamknij panel kontaktu" autofocus><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
     <p class="eyebrow">Zacznijmy od rozmowy</p>
-    <h2 id="contact-title">Napisz do nas</h2>
+    <h2 id="contact-title">Skontaktuj się z nami</h2>
     <p class="contact-description" id="contact-description">Opowiedz nam o swoim wnętrzu. Wybierz wygodny sposób kontaktu.</p>
     <div class="contact-options">
       <a href="https://www.instagram.com/primo.studiodesign/" target="_blank" rel="noopener noreferrer"><span>Instagram<small>@primo.studiodesign</small></span><span aria-hidden="true">↗</span></a>
       <a href="tel:+48884021024"><span>Zadzwoń<small>+48 884 021 024</small></span><span aria-hidden="true">↗</span></a>
-      <a data-email aria-disabled="true"><span>E-mail<small data-email-label>W przygotowaniu</small></span><span aria-hidden="true">↗</span></a>
+      <a data-email aria-disabled="true" hidden><span>E-mail<small data-email-label>W przygotowaniu</small></span><span aria-hidden="true">↗</span></a>
     </div>
-    <form class="contact-form" id="contact-form">
-      <h3>Opowiedz nam o swoim projekcie</h3>
+    <form class="contact-form" id="contact-form" hidden>
+      <h3>Albo zostaw wiadomość</h3>
       <div class="form-row">
         <label>Twoje imię<input name="name" autocomplete="given-name" required maxlength="100" placeholder="Jak się do Ciebie zwracać?"></label>
         <label>Twój e-mail<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="Adres do odpowiedzi"></label>

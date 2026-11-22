@@ -63,7 +63,9 @@ if (studioContact.email) {
   document.querySelectorAll("[data-email]").forEach(link => {
     link.href = `mailto:${studioContact.email}`;
     link.removeAttribute("aria-disabled");
+    link.hidden = false;
   });
+  form.hidden = false;
   document.querySelector("[data-email-label]").textContent = studioContact.email;
   form.querySelector("button[type=submit]").disabled = false;
   note.textContent = "Formularz otworzy gotową wiadomość w Twojej aplikacji pocztowej.";
