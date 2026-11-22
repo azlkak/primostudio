@@ -181,7 +181,7 @@
 .detail-shot--warm-glaze{padding-top:90px}
 .detail-shot--handles{padding-top:30px}
 .detail-shot--wood .detail-shot-frame,.detail-shot--storage .detail-shot-frame{aspect-ratio:4/3}
-.detail-shot--light{padding-top:60px}
+.detail-shot--bath{padding-top:60px}
 @media(max-width:600px){
 .detail-gallery{padding-bottom:55px}
 .detail-gallery-header{padding-bottom:28px}
@@ -196,4 +196,3 @@
 }
 .detail-shot--green-glaze img{transform:scale(1.25);transform-origin:38% 43%}
 .detail-shot--handles img{transform:scale(1.5);transform-origin:75% 65%}
-.detail-shot--light img{transform:scale(1.35);transform-origin:60% 38%}
