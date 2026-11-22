@@ -14,3 +14,7 @@ Galeria „Jeszcze bliżej” pokazuje fotografie bez karuzeli i dodatkowych prz
 - `docs/assets/majdan-closeup-light.webp` ← `hall/_DSC6223.png`
 
 Walidacja: sześć obrazów ładuje się poprawnie; komputer i telefon 390 px; na telefonie jedna kolumna, brak poziomego przewijania; wszystkie lokalne pliki istnieją, składnia skryptu otwierania projektu poprawna i git diff --check bez uwag. Zmiana nie dodaje interakcji ani animacji i zachowuje dotychczasową obsługę klawiatury oraz ograniczenia ruchu.
+
+## Aktualizacja 2026-11-22
+
+Na wskazanie użytkownika ostatni kadr ze schodami zastąpiono dostarczonym zdjęciem `_DSC6243.png`: detal wanny i armatury. Nowy plik: `docs/assets/majdan-closeup-bath.webp`. Podpis „Ciepły akcent przy wannie”, nowy opis alternatywny i centralny kadr bez powiększenia. Poprzednia fotografia pozostaje w zasobach i historii Git.
